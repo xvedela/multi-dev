@@ -1,3 +1,12 @@
+<script setup>
+const {color} = defineProps({
+  color: {
+    required: true,
+    type: String
+  }
+});
+</script>
+
 <template>
   <svg class="ml-2" width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_1_447)">
@@ -12,12 +21,3 @@
     </defs>
   </svg>
 </template>
-
-<script setup>
-const {color} = defineProps({
-  color: {
-    required: true,
-    type: String
-  }
-});
-</script>
