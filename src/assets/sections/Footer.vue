@@ -30,7 +30,9 @@ import IconTwitter from "../icons/IconTwitter.vue";
         </div>
         <div class="flex justify-end">
           <div class="before:content-['Learn_More'] before:px-[1vw]">
-            <ul class="flex flex-col px-[1vw] py-[5.6h] gap-y-[2.3vh] pt-[2.3vh]">
+            <ul
+              class="flex flex-col px-[1vw] py-[5.6h] gap-y-[2.3vh] pt-[2.3vh]"
+            >
               <li>
                 <a href="#">Home</a>
               </li>
@@ -38,8 +40,10 @@ import IconTwitter from "../icons/IconTwitter.vue";
                 <a href="#">Custom Websites</a>
               </li>
               <li>
-                <a href="#">Search Engine<br />
-                  Optimization</a>
+                <a href="#"
+                  >Search Engine<br />
+                  Optimization</a
+                >
               </li>
               <li>
                 <a href="#"> Our Work </a>
@@ -53,7 +57,9 @@ import IconTwitter from "../icons/IconTwitter.vue";
             </ul>
           </div>
           <div class="before:content-['Locations'] before:px-[1vw]">
-            <ul class="flex flex-col px-[1vw] py-[5.6h] gap-y-[2.3vh] pt-[2.3vh]">
+            <ul
+              class="flex flex-col px-[1vw] py-[5.6h] gap-y-[2.3vh] pt-[2.3vh]"
+            >
               <li><a href="#">Dallas Web Design</a></li>
               <li><a href="#">Plano Web Design</a></li>
               <li><a href="#">Frisco Web Design</a></li>
@@ -66,7 +72,9 @@ import IconTwitter from "../icons/IconTwitter.vue";
         </div>
       </div>
       <div>
-        <div class="flex justify-between border-t-2 border-t-white border-opacity-20 py-[3.4vh] opacity-80 text-xs">
+        <div
+          class="flex justify-between border-t-2 border-t-white border-opacity-20 py-[3.4vh] opacity-80 text-xs"
+        >
           <p>© 2023 - Icepick Development, LLC</p>
           <ul class="flex gap-x-10">
             <li><a href="#">Privacy Policy</a></li>
