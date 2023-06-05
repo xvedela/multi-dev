@@ -7,6 +7,11 @@ export default [
     {
         path: '/contactUs',
         name: 'ContactUs',
-        component: () => import("../views/ContactUs.vue")
-    }
+        component: () => import("../views/ContactUs.vue"),
+    },
+    {
+        path: '/ourWork',
+        name: 'OurWork',
+        component: () => import("../views/OurWork.vue"),
+    },
 ];
