@@ -16,9 +16,13 @@
       </p>
     </div>
   </section>
-  <div class="w-[max(390px,72.3vw)] flex flex-col items-center text-white">
-    <div class="flex flex-row bg-gradient-to-b from-[#4B7786] to-[#2F505E]">
-      <image-corewood-care />
+  <div
+    class="w-[max(390px,72.3vw)] flex flex-col mx-auto text-white gap-y-7 max-sm:gap-y-12 mt-9 max-sm:mt-16 mb-16 max-sm:mb-48"
+  >
+    <div
+      class="bg-gradient-to-b flex max-sm:flex-col from-[#4B7786] to-[#2F505E] rounded-xl max-sm:rounded-3xl overflow-hidden"
+    >
+      <image-corewood-care class="w-[max(354px,35.2vw)] pt-[73px]" />
       <div>
         <p>Corewood Care</p>
         <p>
@@ -31,7 +35,9 @@
         >
       </div>
     </div>
-    <div class="flex flex-row bg-gradient-to-b from-[#292929] to-black relative">
+    <!-- <div
+      class="bg-gradient-to-b from-[#292929] to-black rounded-xl max-sm:rounded-3xl"
+    >
       <image-corewood-care />
       <div>
         <p>Kojima Productions</p>
@@ -45,7 +51,9 @@
         >
       </div>
     </div>
-    <div class="flex flex-row bg-gradient-to-b from-[#2586BC] to-[#003F72]">
+    <div
+      class="bg-gradient-to-b from-[#2586BC] to-[#003F72] rounded-xl max-sm:rounded-3xl"
+    >
       <image-corewood-care />
       <div>
         <p>Aegis Living</p>
@@ -57,7 +65,9 @@
         <a href="#" class="px-8 py-4 rounded-[40px] bg-[#F26924]">Visit Site</a>
       </div>
     </div>
-    <div class="flex flex-row bg-gradient-to-b from-[#91ACC6] to-[#7F97AD]">
+    <div
+      class="bg-gradient-to-b from-[#91ACC6] to-[#7F97AD] rounded-xl max-sm:rounded-3xl"
+    >
       <image-corewood-care />
       <div>
         <p>3rd Street Custom Homes</p>
@@ -70,7 +80,7 @@
       </div>
     </div>
     <div
-      class="flex flex-row bg-gradient-to-b from-[#F3C57A] via-[#F39369] to-[#E94867]"
+      class="bg-gradient-to-b from-[#F3C57A] via-[#F39369] to-[#E94867] rounded-xl max-sm:rounded-3xl"
     >
       <image-corewood-care />
       <div>
@@ -84,7 +94,9 @@
         <a href="#" class="px-8 py-4 rounded-[40px] bg-[#3B3D9C]">Visit Site</a>
       </div>
     </div>
-    <div class="flex flex-row bg-gradient-to-b from-[#89BC51] to-[#62AC47]">
+    <div
+      class="bg-gradient-to-b from-[#89BC51] to-[#62AC47] rounded-xl max-sm:rounded-3xl"
+    >
       <image-corewood-care />
       <div>
         <p>Infowerks</p>
@@ -95,11 +107,11 @@
         </p>
         <a href="#" class="px-8 py-4 rounded-[40px] bg-[#3B3D9C]">Visit Site</a>
       </div>
-    </div>
+    </div> -->
   </div>
   <section>
     <div
-      class="flex flex-col bg-[#6967CE] text-center max-sm:text-left gap-1 max-sm:gap-2 py-[max(40px,11.2vh)] max-sm:pl-5"
+      class="bg-[#6967CE] text-center max-sm:text-left gap-1 max-sm:gap-2 py-[max(40px,11.2vh)] max-sm:pl-5"
     >
       <p class="text-white text-[max(24px,4vw)] font-normal">
         Ready to work with us?
@@ -112,7 +124,3 @@
     </div>
   </section>
 </template>
-
-<script setup>
-import ImageCorewoodCare from "../assets/images/ImageCorewoodCare.vue";
-</script>

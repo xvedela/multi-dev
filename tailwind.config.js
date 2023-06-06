@@ -6,9 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      width: {
-        '100': '57.9vw',
-      }
     },
   },
   plugins: [],
