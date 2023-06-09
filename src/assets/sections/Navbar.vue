@@ -15,18 +15,19 @@
           <li>
             <div
                 class="relative flex items-center opacity-60 hover:cursor-pointer"
-                @click="toggleDisplay"
+                @click="toggleServices"
             >
               <p v-text="'Services'"/>
-              <angle-quote-down :class="{'rotate-180': display}"/>
-              <div v-if="display" class="absolute min-w-max text-black [&>a]:hover:bg-[#FFB902]">
+              <angle-quote-down :class="{'rotate-180': services}"/>
+              <div v-if="services" class="absolute top-[100%] min-w-max text-black flex gap-x-[0.63vw] ">
                 <router-link
                     :to="{ name: 'TemplatedSites' }"
+                    class="bg-white px-[0.42vw] py-[0.16vw] rounded-2xl hover:bg-[#FFB902]"
                     v-text="'Templated Sites'"
                 />
-                >
                 <router-link
                     :to="{ name: 'CustomWebsite' }"
+                    class="bg-white px-[0.42vw] py-[0.16vw] rounded-2xl hover:bg-[#FFB902]"
                     v-text="'Custom Website'"
                 />
               </div>
@@ -52,15 +53,15 @@
 
       <!-- responsive navbar -->
 
-      <div class="hidden max-sm:block hover:cursor-pointer z-10" @click="toggleDisplay1">
-        <bars v-if="!display1"/>
+      <div class="hidden max-sm:block hover:cursor-pointer z-10" @click="toggleNavbar">
+        <bars v-if="!navbar"/>
         <icon-close v-else/>
       </div>
       <div
-          v-if="display1"
+          v-if="navbar"
           class="bg-white absolute top-0 left-0 py-4 flex items-center w-full"
       >
-        <ul class="flex flex-col items-center gap-x-[2.08vw] w-full" @click="toggleDisplay1">
+        <ul class="flex flex-col items-center gap-x-[2.08vw] w-full" @click="toggleNavbar">
           <li>
             <router-link :to="{ name: 'Home' }" v-text="'Home'"/>
           </li>
@@ -100,17 +101,17 @@ import LogoMultiDev from "../logos/LogoMultiDev.vue";
 import AngleQuoteDown from "../icons/AngleQuoteDown.vue";
 import ArrowRight from "../icons/ArrowRight.vue";
 import Bars from "../icons/Bars.vue";
-import {ref} from "vue";
 import IconClose from "../icons/IconClose.vue";
+import {ref} from "vue";
 
-const display = ref(false);
-const display1 = ref(false);
+const services = ref(false);
+const navbar = ref(false);
 
-const toggleDisplay = () => {
-  display.value = !display.value;
+const toggleServices = () => {
+  services.value = !services.value;
 };
 
-const toggleDisplay1 = () => {
-  display1.value = !display1.value;
+const toggleNavbar = () => {
+  navbar.value = !navbar.value;
 };
 </script>
