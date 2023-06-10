@@ -2,11 +2,11 @@
   <nav
     class="bg-[#5A58AB] pl-[max(15px,1.82vw)] pr-[max(22px,1.82vw)] py-[max(20px,1.2vw)] sticky"
   >
-    <div class="flex items-center max-sm:justify-between">
+    <div class="flex items-center max-md:justify-between">
       <router-link :to="{ name: 'Home' }">
         <logo-multi-dev />
       </router-link>
-      <div class="flex items-center justify-between w-full max-sm:hidden">
+      <div class="flex items-center justify-between w-full max-md:hidden">
         <div></div>
         <ul class="flex gap-x-[2.08vw] text-white">
           <li>
@@ -63,7 +63,7 @@
       <!-- responsive navbar -->
 
       <div
-        class="hidden max-sm:block hover:cursor-pointer z-10"
+        class="hidden max-md:block hover:cursor-pointer z-10"
         @click="toggleNavbar"
       >
         <bars v-if="!navbar" />

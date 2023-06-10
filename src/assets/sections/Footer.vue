@@ -1,17 +1,17 @@
 <template>
   <footer class="bg-black text-white">
     <div class="pt-[max(40px,3.91vw)] mx-[max(20px,20.31vw)] flex flex-col">
-      <div class="flex justify-between max-sm:flex-col">
+      <div class="flex justify-between max-md:flex-col">
         <div class="flex flex-col">
-          <logo-multi-dev class="mb-[1.67vw] max-sm:mb-12" />
+          <logo-multi-dev class="mb-[1.67vw] max-md:mb-12" />
           <p
-            class="mb-[1.35vw] text-sm w-7/12 max-sm:mb-7"
+            class="mb-[1.35vw] text-sm w-7/12 max-md:mb-7"
             v-text="
               'We help businesses generate more revenue through strategic web\n' +
               '            design and SEO services.'
             "
           />
-          <p class="mb-[1.3vw] max-sm:mb-7" v-text="'Follow Us'" />
+          <p class="mb-[1.3vw] max-md:mb-7" v-text="'Follow Us'" />
           <ul class="flex gap-x-6">
             <li>
               <icon-facebook />
@@ -24,9 +24,9 @@
             </li>
           </ul>
         </div>
-        <div class="flex gap-x-[max(20px,1.56vw)] max-sm:ml-0 max-sm:mt-8">
+        <div class="flex gap-x-[max(20px,1.56vw)] max-md:ml-0 max-md:mt-8">
           <div class="flex flex-col gap-y-[max(18px,1.04vw)]">
-            <p>Learn More</p>
+            <p v-text="'Learn More'" />
             <ul class="flex flex-col gap-y-4">
               <li v-for="link in links">
                 <router-link :to="link.to" v-text="link.text" />
@@ -45,7 +45,7 @@
       </div>
       <div>
         <div
-          class="flex max-sm:flex-col-reverse max-sm:gap-y-7 max-sm:py-10 my-[1.3vw] justify-between border-t-2 border-t-white border-opacity-20 pt-[1.3vw] opacity-80 text-xs mt-[max(40px,5.21vw)]"
+          class="flex max-md:flex-col-reverse max-md:gap-y-7 max-md:py-10 my-[1.3vw] justify-between border-t-2 border-t-white border-opacity-20 pt-[1.3vw] opacity-80 text-xs mt-[max(40px,5.21vw)]"
         >
           <p v-text="'© 2023 - Icepick Development, LLC'" />
           <ul class="flex gap-x-[1.3vw] justify-between">
