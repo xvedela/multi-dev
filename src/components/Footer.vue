@@ -9,27 +9,21 @@
         <p class="mb-[1.3vw] max-md:mb-7" v-text="'Follow Us'"/>
         <ul class="flex gap-x-6">
           <li v-for="icon in socialMediaIcons">
-            <i :class="icon"/>
+            <a :href="icon.href"><i :class="icon.classes"/></a>
           </li>
         </ul>
       </div>
       <div class="flex gap-x-[1.56vw] max-md:gap-x-5 max-md:ml-0 max-md:mt-8">
-        <div class="flex flex-col gap-y-[1.04vw] max-md:gap-y-4">
-          <p v-text="'Learn More'"/>
-          <ul class="flex flex-col gap-y-4">
-            <li v-for="link in footerNavLinks">
-              <router-link :to="link.to" v-text="link.title"/>
-            </li>
-          </ul>
-        </div>
-        <div class="flex flex-col gap-y-[1.04vw] max-md:gap-y-4">
-          <p v-text="'Locations'"/>
-          <ul class="flex flex-col gap-y-4">
-            <li v-for="company in webDesignCompanies">
-              <a href="#" v-text="company"/>
-            </li>
-          </ul>
-        </div>
+        <ul class="flex flex-col gap-y-4 before:content-['Learn_More']">
+          <li v-for="link in footerNavLinks">
+            <router-link :to="link.to" v-text="link.title"/>
+          </li>
+        </ul>
+        <ul class="flex flex-col gap-y-4 before:content-['Locations']">
+          <li v-for="design in webDesignCompanies">
+            <a :href="design.href" v-text="design.title"/>
+          </li>
+        </ul>
       </div>
     </div>
     <div>

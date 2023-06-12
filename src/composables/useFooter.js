@@ -2,9 +2,9 @@ import {ref} from "vue";
 
 export function useFooter() {
     const socialMediaIcons = ref([
-        "fa-brands fa-square-facebook fa-xl",
-        "fa-brands fa-instagram fa-xl",
-        "fa-brands fa-twitter fa-xl",
+        {classes: "fa-brands fa-square-facebook fa-xl", href: "#"},
+        {classes: "fa-brands fa-instagram fa-xl", href: "#"},
+        {classes: "fa-brands fa-twitter fa-xl", href: "#"},
     ]);
 
     const footerNavLinks = ref([
@@ -17,13 +17,13 @@ export function useFooter() {
     ]);
 
     const webDesignCompanies = ref([
-        "Dallas Web Design",
-        "Plano Web Design",
-        "Frisco Web Design",
-        "Fort Web Design",
-        "Allen Web Design",
-        "McKinney Web Design",
-        "Grapevine Web Design",
+        {title: "Dallas Web Design", href: "#"},
+        {title: "Plano Web Design", href: "#"},
+        {title: "Frisco Web Design", href: "#"},
+        {title: "Fort Web Design", href: "#"},
+        {title: "Allen Web Design", href: "#"},
+        {title: "McKinney Web Design", href: "#"},
+        {title: "Grapevine Web Design", href: "#"},
     ]);
 
     return {socialMediaIcons, footerNavLinks, webDesignCompanies};
