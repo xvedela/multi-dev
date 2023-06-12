@@ -18,7 +18,10 @@
               @click="toggleServices"
             >
               <p v-text="'Services'" />
-              <angle-quote-down :class="{ 'rotate-180': services }" />
+              <i
+                class="fa-solid fa-angle-down"
+                :class="{ 'rotate-180': services }"
+              />
               <div
                 v-if="services"
                 class="absolute top-[100%] min-w-max text-black flex gap-x-[0.63vw]"
@@ -66,12 +69,13 @@
         class="hidden max-md:block hover:cursor-pointer z-10"
         @click="toggleNavbar"
       >
-        <bars v-if="!navbar" />
-        <icon-close v-else />
+        <i
+          :class="'fa-solid fa-xl ' + (navbar ? 'fa-x' : 'fa-bars text-white')"
+        />
       </div>
       <div
         v-if="navbar"
-        class="bg-white absolute top-0 left-0 py-4 flex items-center w-full"
+        class="bg-white absolute top-0 left-0 py-4 flex items-center w-full h-[100vh]"
       >
         <ul
           class="flex flex-col items-center gap-x-[2.08vw] w-full"
@@ -115,10 +119,6 @@
 
 <script setup>
 import LogoMultiDev from "../logos/LogoMultiDev.vue";
-import AngleQuoteDown from "../icons/AngleQuoteDown.vue";
-import ArrowRight from "../icons/ArrowRight.vue";
-import Bars from "../icons/Bars.vue";
-import IconClose from "../icons/IconClose.vue";
 import { ref } from "vue";
 
 const services = ref(false);

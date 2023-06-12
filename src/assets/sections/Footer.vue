@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-black text-white">
+  <footer class="bg-[#0B0B0B] text-white">
     <div class="pt-[max(40px,3.91vw)] mx-[max(20px,20.31vw)] flex flex-col">
       <div class="flex justify-between max-md:flex-col">
         <div class="flex flex-col">
@@ -13,14 +13,8 @@
           />
           <p class="mb-[1.3vw] max-md:mb-7" v-text="'Follow Us'" />
           <ul class="flex gap-x-6">
-            <li>
-              <icon-facebook />
-            </li>
-            <li>
-              <icon-instagram />
-            </li>
-            <li>
-              <icon-twitter />
+            <li v-for="icon in socialMediaIcons">
+              <i :class="icon" />
             </li>
           </ul>
         </div>
@@ -28,16 +22,16 @@
           <div class="flex flex-col gap-y-[max(18px,1.04vw)]">
             <p v-text="'Learn More'" />
             <ul class="flex flex-col gap-y-4">
-              <li v-for="link in links">
-                <router-link :to="link.to" v-text="link.text" />
+              <li v-for="link in footerNavLinks">
+                <router-link :to="link.to" v-text="link.title" />
               </li>
             </ul>
           </div>
           <div class="flex flex-col gap-y-[max(18px,1.04vw)]">
             <p v-text="'Locations'" />
             <ul class="flex flex-col gap-y-4">
-              <li v-for="design in webDesigns">
-                <a href="#" v-text="design + ' Web Design'" />
+              <li v-for="company in webDesignCompanies">
+                <a href="#" v-text="company" />
               </li>
             </ul>
           </div>
@@ -60,56 +54,7 @@
 
 <script setup>
 import LogoMultiDev from "../logos/LogoMultiDev.vue";
-import IconFacebook from "../icons/IconFacebook.vue";
-import IconInstagram from "../icons/IconInstagram.vue";
-import IconTwitter from "../icons/IconTwitter.vue";
+import { useFooter } from "../../composables/useFooter";
 
-const links = [
-  {
-    to: {
-      name: "Home",
-    },
-    text: "Home",
-  },
-  {
-    to: {
-      name: "CustomWebsite",
-    },
-    text: "Custom Website",
-  },
-  {
-    to: {
-      name: "Home",
-    },
-    text: "Search Engine Optimization",
-  },
-  {
-    to: {
-      name: "OurWork",
-    },
-    text: "Our Work",
-  },
-  {
-    to: {
-      name: "Blog",
-    },
-    text: "Blog",
-  },
-  {
-    to: {
-      name: "ContactUs",
-    },
-    text: "Contact",
-  },
-];
-
-const webDesigns = [
-  "Dallas",
-  "Plano",
-  "Frisco",
-  "Fort Worth",
-  "Allen",
-  "McKinney",
-  "Grapevine",
-];
+const { socialMediaIcons, footerNavLinks, webDesignCompanies } = useFooter();
 </script>

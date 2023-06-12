@@ -6,7 +6,7 @@
           href="#"
           class="bg-[#2C4163] flex justify-center items-center rounded-[100px] w-fit py-2 px-3 gap-x-2"
         >
-          <rating-stars />
+          <i v-for="i in 5" class="fa-solid fa-star text-[#23A6F0]" />
           <span>5.0 Rating <span class="opacity-60">|</span></span>
           <logo-up-city />
         </a>
@@ -65,9 +65,7 @@
 </template>
 
 <script setup>
-import RatingStars from "../assets/icons/RatingStars.vue";
 import LogoUpCity from "../assets/logos/LogoUpCity.vue";
-import ArrowRight from "../assets/icons/ArrowRight.vue";
 import LogoAegisLiving from "../assets/logos/LogoAegisLiving.vue";
 import LogoKojimaConstructionsStore from "../assets/logos/LogoKojimaConstructionsStore.vue";
 import LogoDoctorButlers from "../assets/logos/LogoDoctorButlers.vue";
