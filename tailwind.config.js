@@ -8,7 +8,8 @@ export default {
         extend: {
             colors: {
                 'footer': "#0B0B0B",
-            }
+                'header': "#5A58AB",
+            },
         },
     },
     plugins: [],

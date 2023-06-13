@@ -1,10 +1,10 @@
 <template>
-  <i :class="classes"/>
+  <i :class="_class"/>
 </template>
 
 <script setup>
-const {classes} = defineProps({
-  classes: {
+const {_class} = defineProps({
+  _class: {
     required: true,
     type: String,
   },

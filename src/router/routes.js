@@ -1,4 +1,5 @@
 import {RouterView} from "vue-router";
+import {defineComponent} from "vue";
 
 const routes = [
     {
@@ -8,16 +9,16 @@ const routes = [
     },
     {
         path: "/services",
-        component: () => RouterView,
+        component: () => new Promise(resolve => resolve(defineComponent(RouterView))),
         children: [
             {
-                path: "customWebsite",
-                name: "CustomWebsite",
+                path: "customWebsites",
+                name: "CustomWebsites",
                 component: () => import("../views/CustomWebsites.vue"),
             },
             {
-                path: "templatedSites",
-                name: "TemplatedSites",
+                path: "templatedWebSites",
+                name: "TemplatedWebsites",
                 component: () => import("../views/TemplatedWebSites.vue"),
             },
             {

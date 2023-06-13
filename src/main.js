@@ -1,9 +1,9 @@
 import "./style.css";
 import {createApp} from "vue";
 import App from "./App.vue";
-import FontAwesomeIcon from "./components/font-awesome-icon.vue";
+import FontAwesome from "./components/FontAwesome.vue";
 import router from "./router";
 
 
 const app = createApp(App);
-app.component("FontAwesomeIcon", FontAwesomeIcon).use(router).mount("#app");
+app.component("FontAwesome", FontAwesome).use(router).mount("#app");
