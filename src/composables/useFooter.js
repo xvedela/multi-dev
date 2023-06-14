@@ -1,46 +1,46 @@
-import {reactive} from "vue";
+import MultiDev from "../assets/logos/MultiDev.vue";
 
 export function useFooter() {
-    return reactive({
-        socialMediaIcons: [
-            {_class: "fa-brands fa-square-facebook fa-xl", href: "#"},
-            {_class: "fa-brands fa-instagram fa-xl", href: "#"},
-            {_class: "fa-brands fa-twitter fa-xl", href: "#"},
+  return {
+    footer: {
+      companyLogo: MultiDev,
+      serviceDescription: "We help businesses generate more revenue through strategic web design and SEO services.",
+      followLabel: "Follow Us",
+      socialLinks: [
+        {iconClass: "fa-square-facebook", url: "#"},
+        {iconClass: "fa-instagram", url: "#"},
+        {iconClass: "fa-twitter", url: "#"},
+      ],
+      navLinks: {
+        titleBefore: "before:content-['Learn_More']",
+        links: [
+          {name: "Home", label: "Home"},
+          {name: "CustomWebsites", label: "Custom Websites"},
+          {name: "SearchEngineOptimization", label: "Search Engine Optimization"},
+          {name: "OurWork", label: "Our Work"},
+          {name: "Blog", label: "Blog"},
+          {name: "Contact", label: "Contact"},
         ],
-        footerInfo: {
-            description: "We help businesses generate more revenue through strategic web design and SEO services.",
-            followUs: "Follow Us",
-        },
-        footerNavLinks: {
-            label: "before:content-['Learn_More']",
-            links: [
-                {to: {name: "Home"}, title: "Home"},
-                {to: {name: "CustomWebsites"}, title: "Custom Websites"},
-                {to: {name: "SearchEngineOptimization"}, title: "Search Engine Optimization"},
-                {to: {name: "OurWork"}, title: "Our Work"},
-                {to: {name: "Blog"}, title: "Blog"},
-                {to: {name: "Contact"}, title: "Contact"},
-            ],
-        },
-        webDesignCompanies: {
-            label: "before:content-['Locations']",
-            links: [
-                {title: "Dallas Web Design", href: "#"},
-                {title: "Plano Web Design", href: "#"},
-                {title: "Frisco Web Design", href: "#"},
-                {title: "Fort Web Design", href: "#"},
-                {title: "Allen Web Design", href: "#"},
-                {title: "McKinney Web Design", href: "#"},
-                {title: "Grapevine Web Design", href: "#"},
-            ],
-        },
-        subFooterInfo: {
-            _class: "fa-regular fa-copyright",
-            text: " 2023 - Multi Dev Development, LLC"
-        },
-        subFooterNavLinks: [
-            {text: 'Privacy Policy', href: '#'},
-            {text: 'Sitemap', href: '#'},
+      },
+      designCompanies: {
+        titleBefore: "before:content-['Locations']",
+        navLinks: [
+          {name: "Dallas Web Design", websiteUrl: "#"},
+          {name: "Plano Web Design", websiteUrl: "#"},
+          {name: "Frisco Web Design", websiteUrl: "#"},
+          {name: "Fort Web Design", websiteUrl: "#"},
+          {name: "Allen Web Design", websiteUrl: "#"},
+          {name: "McKinney Web Design", websiteUrl: "#"},
+          {name: "Grapevine Web Design", websiteUrl: "#"},
         ],
-    });
+      },
+    },
+    subFooter: {
+      copyrightText: '<i class="fa-regular fa-copyright"></i> 2023 - Multi Dev Development, LLC',
+      navLinks: [
+        {label: 'Privacy Policy', url: '#'},
+        {label: 'Sitemap', url: '#'},
+      ],
+    },
+  };
 }

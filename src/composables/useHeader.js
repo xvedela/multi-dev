@@ -1,34 +1,34 @@
-import {reactive} from "vue";
+import { reactive } from "vue";
 
 export function useHeader() {
     return reactive({
         headerNavLinks: [
-            {to: {name: "Home"}, title: "Home"},
+            { to: { name: "Home" }, title: "Home" },
             {
-                to: {name: "Services"},
+                to: { name: "Services" },
                 subLinks: [
                     {
-                        to: {name: "TemplatedWebsites"},
+                        to: { name: "TemplatedWebsites" },
                         title: "Templated Websites",
                     },
                     {
-                        to: {name: "CustomWebsites"},
+                        to: { name: "CustomWebsites" },
                         title: "Custom Websites",
                     },
                     {
-                        to: {name: "SearchEngineOptimization"},
+                        to: { name: "SearchEngineOptimization" },
                         title: "Search Engine Optimization",
                     },
                 ],
                 title: "Services",
             },
-            {to: {name: "OurWork"}, title: "Our Work", _class: "opacity-60"},
-            {to: {name: "Blog"}, title: "Blog", _class: "opacity-60"},
-            {to: {name: "Contact"}, title: "Contact", _class: "opacity-60"},
+            { to: { name: "OurWork" }, title: "Our Work", _class: "opacity-60" },
+            { to: { name: "Blog" }, title: "Blog", _class: "opacity-60" },
+            { to: { name: "Contact" }, title: "Contact", _class: "opacity-60" },
         ],
 
         navButton: {
-            to: {name: "Contact"},
+            to: { name: "Contact" },
             text: "Let's Talk",
         },
 
