@@ -20,7 +20,6 @@ export function useHeader() {
                         title: "Search Engine Optimization",
                     },
                 ],
-                subLinkClass: "bg-white px-[0.42vw] py-[0.16vw] rounded-2xl hover:bg-[#FFB902]",
                 title: "Services",
             },
             {to: {name: "OurWork"}, title: "Our Work", _class: "opacity-60"},
@@ -31,7 +30,6 @@ export function useHeader() {
         navButton: {
             to: {name: "Contact"},
             text: "Let's Talk",
-            _class: "flex items-center bg-[#FFB902] px-[1.82vw] py-[0.52vw] rounded-3xl gap-x-[0.42vw]",
         },
 
         arrows: {

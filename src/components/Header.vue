@@ -19,7 +19,9 @@
                   <ul v-if="state.services"
                       class="absolute top-[100%] max-md:left-[-50%] max-md:z-10 flex flex-col rounded-md bg-white min-w-max text-black gap-y-[0.63vw] px-2 py-4">
                     <li v-for="(subLink, index) in link.subLinks" :key="index">
-                      <router-link :to="subLink.to" :class="link.subLinkClass" v-text="subLink.title"/>
+                      <router-link :to="subLink.to"
+                                   class="bg-white px-[0.42vw] py-[0.16vw] rounded-2xl hover:bg-[#FFB902]"
+                                   v-text="subLink.title"/>
                     </li>
                   </ul>
                 </div>
@@ -29,7 +31,8 @@
               </template>
             </li>
           </ul>
-          <router-link :to="navButton.to" :class="navButton._class">
+          <router-link :to="navButton.to"
+                       class="flex items-center bg-[#FFB902] px-[1.82vw] py-[0.52vw] rounded-3xl gap-x-[0.42vw]">
             {{ navButton.text }}
             <font-awesome :_class="arrows.arrowRight"/>
           </router-link>
