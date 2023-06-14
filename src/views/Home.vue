@@ -1,74 +1,66 @@
 <template>
-<!--  <section class="bg-[#6967CE]">-->
-<!--    <div class="flex flex-col p-24 text-white gap-y-10 w-auto">-->
-<!--      <div class="flex flex-col items-center gap-y-10">-->
-<!--        <a-->
-<!--          href="#"-->
-<!--          class="bg-[#2C4163] flex justify-center items-center rounded-[100px] w-fit py-2 px-3 gap-x-2"-->
-<!--        >-->
-<!--          <i v-for="i in 5" class="fa-solid fa-star text-[#23A6F0]" />-->
-<!--          <span>5.0 Rating <span class="opacity-60">|</span></span>-->
-<!--          <logo-up-city />-->
-<!--        </a>-->
-<!--        <h1 class="text-6xl text-center">-->
-<!--          We Design & Develop Websites<br />-->
-<!--          That Deliver Results-->
-<!--        </h1>-->
-<!--        <p class="opacity-60 w-1/3 text-center">-->
-<!--          Our goal is to develop simple and modern websites that are optimized-->
-<!--          for both search engines and user experience, ultimately driving more-->
-<!--          traffic and revenue to your business.-->
-<!--        </p>-->
-<!--        <div class="flex justify-between gap-x-7">-->
-<!--          <a-->
-<!--            href="#"-->
-<!--            class="bg-[#FFB902] text-black flex items-center rounded-3xl px-9 py-4"-->
-<!--          >-->
-<!--            Book a Call-->
-<!--            <arrow-right color="black" />-->
-<!--          </a>-->
-<!--          <a-->
-<!--            href="#"-->
-<!--            class="bg-transparent border-white border-2 border-opacity-60 flex items-center rounded-3xl px-9 py-4"-->
-<!--          >-->
-<!--            Our Work-->
-<!--            <arrow-right color="white" />-->
-<!--          </a>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="flex flex-col items-center gap-y-10 pt-16">-->
-<!--        <h5-->
-<!--          class="flex justify-center items-center before:content-[''] before:w-[20vw] before:h-0.5 before:mr-5 before:bg-white before:opacity-10 after:content-[''] after:w-[20vw] after:h-0.5 after:ml-5 after:bg-white after:opacity-10"-->
-<!--        >-->
-<!--          Trusted by Innovative Companies Worldwide-->
-<!--        </h5>-->
-<!--        <ul class="flex items-center gap-x-12">-->
-<!--          <li>-->
-<!--            <logo-aegis-living />-->
-<!--          </li>-->
-<!--          <li>-->
-<!--            <logo-kojima-constructions-store />-->
-<!--          </li>-->
-<!--          <li>-->
-<!--            <logo-doctor-butlers />-->
-<!--          </li>-->
-<!--          <li>-->
-<!--            <logo-iris-telehealth />-->
-<!--          </li>-->
-<!--          <li>-->
-<!--            <logo-united-way />-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </section>-->
+  <section class="bg-home">
+    <div
+        class="sm:w-[59.38vw] flex flex-col gap-y-[6.67vw] mx-4 sm:mx-auto mb-32 sm:mb-[2.6vw] pt-10 sm:pt-[4.17vw] text-white">
+      <div class="flex flex-col items-center gap-y-10 md:gap-y-[1.56vw]">
+        <a href="https://upcity.com/" target="_blank"
+           class="bg-[#2C4163] flex items-center  gap-x-3 py-3 px-5 rounded-3xl"
+        >
+          <div class="flex gap-x-1">
+            <i v-for="index in 5" :key="index" class="fa-solid fa-star text-[#23A6F0]"/>
+          </div>
+          <p v-text="'5.0 Rating'"/>
+          <span class="opacity-60" v-text="'|'"/>
+          <up-city/>
+        </a>
+        <h1 v-text="'We Design & Develop Websites That Deliver Results'"
+            class="text-center text-4xl md:text-6xl font-bold md:leading-tight"/>
+        <p
+            v-text="`Our goal is to develop simple and modern websites that are optimized
+          for both search engines and user experience, ultimately driving more
+          traffic and revenue to your business.`"
+            class="md:w-1/2 text-center opacity-60"/>
+        <div class="flex gap-x-4 md:gap-x-7">
+          <router-link
+              :to="{name: 'Contact'}"
+              class="bg-button flex items-center gap-x-2 px-8 py-4 text-black rounded-4xl"
+              v-html="bac"
+          />
+          <router-link
+              :to="{name: 'OurWork'}"
+              class="bg-transparent flex items-center gap-x-2 px-9 py-4 border-2 border-white rounded-4xl border-opacity-60"
+              v-html="ow"
+          />
+        </div>
+      </div>
+      <!--            <div class="flex flex-col items-center gap-y-10 pt-16">-->
+      <!--              <h5-->
+      <!--                  class="flex justify-center items-center before:content-[''] before:w-[20vw] before:h-0.5 before:mr-5 before:bg-white before:opacity-10 after:content-[''] after:w-[20vw] after:h-0.5 after:ml-5 after:bg-white after:opacity-10"-->
+      <!--              >-->
+      <!--                Trusted by Innovative Companies Worldwide-->
+      <!--              </h5>-->
+      <!--              <ul class="flex items-center gap-x-12">-->
+      <!--                <li v-for="(logo, index) in logos" :key="index">-->
+      <!--                  <component :is="logo"/>-->
+      <!--                </li>-->
+      <!--              </ul>-->
+      <!--            </div>-->
+    </div>
+  </section>
 </template>
 
 <script setup>
-import LogoUpCity from "../assets/logos/LogoUpCity.vue";
-import LogoAegisLiving from "../assets/logos/LogoAegisLiving.vue";
-import LogoKojimaConstructionsStore from "../assets/logos/LogoKojimaConstructionsStore.vue";
-import LogoDoctorButlers from "../assets/logos/LogoDoctorButlers.vue";
-import LogoIrisTelehealth from "../assets/logos/LogoIrisTelehealth.vue";
-import LogoUnitedWay from "../assets/logos/LogoUnitedWay.vue";
+import UpCity from "../assets/logos/UpCity.vue";
+import AegisLiving from "../assets/logos/LogoAegisLiving.vue";
+import KojimaConstructionsStore from "../assets/logos/LogoKojimaConstructionsStore.vue";
+import DoctorButlers from "../assets/logos/LogoDoctorButlers.vue";
+import IrisTelehealth from "../assets/logos/LogoIrisTelehealth.vue";
+import UnitedWay from "../assets/logos/LogoUnitedWay.vue";
+
+const bac = 'Book a Call <i class="fa-solid fa-arrow-right text-black"/>';
+const ow = 'Our Work <i class="fa-solid fa-arrow-right text-white"/>';
+
+const logos = [
+  AegisLiving, KojimaConstructionsStore, DoctorButlers, IrisTelehealth, UnitedWay
+];
 </script>

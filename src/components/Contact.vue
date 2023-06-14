@@ -26,7 +26,7 @@
       />
       <button
           type="submit"
-          class="bg-[#FFB902] rounded-[37px] font-normal text-sm leading-6 text-center py-4"
+          class="bg-[#FFB902] rounded-4xl font-normal text-sm leading-6 text-center py-4"
           v-text="'Submit'"
       />
     </form>

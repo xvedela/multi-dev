@@ -2,7 +2,7 @@
   <footer class="bg-footer text-white flex flex-col pt-[3.91vw] max-md:pt-12 px-[20.31vw] max-md:px-5">
     <div class="flex justify-between max-md:flex-col">
       <div class="flex flex-col">
-        <logo-multi-dev class="mb-[1.67vw] max-md:mb-12"/>
+        <multi-dev class="mb-[1.67vw] max-md:mb-12"/>
         <p class="mb-[1.35vw] max-md:mb-7 text-sm w-7/12"
            v-text="footerInfo.description"/>
         <p class="mb-[1.3vw] max-md:mb-7" v-text="footerInfo.followUs"/>
@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-import LogoMultiDev from "../assets/logos/LogoMultiDev.vue";
+import MultiDev from "../assets/logos/MultiDev.vue";
 import {useFooter} from "../composables/useFooter.js";
 
 const {

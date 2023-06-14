@@ -2,7 +2,7 @@
   <header>
     <nav class="bg-header pl-[1.82vw] max-md:pl-4 pr-[1.82vw]  max-md:pr-10 py-[1.2vw] max-md:py-5 sticky">
       <div class="flex items-center max-md:justify-between">
-        <logo-multi-dev/>
+        <multi-dev/>
         <font-awesome class="hidden max-md:block hover:cursor-pointer z-10"
                       @click="toggleNavbar" :_class="state.navbar ? resNavbar.close : resNavbar.bars"/>
         <div class="md:justify-between md:flex md:text-base md:flex-row md:items-center md:w-full flex-col text-xl"
@@ -32,7 +32,7 @@
             </li>
           </ul>
           <router-link :to="navButton.to"
-                       class="flex items-center bg-[#FFB902] px-[1.82vw] py-[0.52vw] rounded-3xl gap-x-[0.42vw]">
+                       class="flex items-center bg-button px-[1.82vw] py-[0.52vw] rounded-3xl gap-x-[0.42vw]">
             {{ navButton.text }}
             <font-awesome :_class="arrows.arrowRight"/>
           </router-link>
@@ -44,7 +44,7 @@
 
 <script setup>
 import {useHeader} from "../composables/useHeader.js";
-import LogoMultiDev from "../assets/logos/LogoMultiDev.vue";
+import MultiDev from "../assets/logos/MultiDev.vue";
 import {reactive} from 'vue';
 
 const state = reactive({

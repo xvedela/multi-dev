@@ -39,7 +39,7 @@
         />
         <a
           href="#"
-          class="px-8 py-4 w-fit rounded-[40px] leading-6"
+          class="px-8 py-4 w-fit rounded-4xl leading-6"
           :class="site.btn_bg + ' ' + site.text"
           >Visit Site</a
         >
@@ -55,7 +55,7 @@
         v-text="'Ready to work with us?'"
       />
       <router-link
-        :to="{ name: 'ContactUs' }"
+        :to="{ name: 'Contact' }"
         class="w-fit text-[#FFB902] underline text-[max(24px,3.18vw)] font-normal leading-[max(28px,4.53vw)]"
         v-text="`Let's build something awesome.`"
       />
@@ -65,7 +65,7 @@
 
 <script setup>
 const getImgUrl = (img) =>
-  new URL(`../assets/websites/${img}`, import.meta.url).href;
+  new URL(`../assets/images/websites/${img}`, import.meta.url).href;
 
 const websites = [
   {
