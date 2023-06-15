@@ -1,23 +1,28 @@
 <template>
-  <section class="bg-[#6967CE]">
-    <div
-      class="flex flex-col pt-[max(40px,4.69vw)] pb-[max(40px,3.91vw)] gap-y-[1.04vw] max-md:gap-7 w-[max(350px,39.58vw)] ml-[max(20px,20.31vw)] max-md:text-center max-md:mx-auto"
-    >
-      <h1
-        class="text-white text-[max(36px,3.07vw)] font-medium max-md:font-bold leading-[max(48px,3.44vw)] ml-4 max-md:ml-0"
-        v-text="'Contact Us'"
-      />
-      <p
-        class="text-[#BDC8DB] text-[max(16px,1.15vw)] font-normal leading-[max(24px,1.61vw)] tracking-[-0.5px] ml-4 max-md:ml-0"
-        v-text="
-          `Whether you're needing help with a new project or just want to pick our brain we're here for you!`
-        "
-      />
-    </div>
+  <section class="contact-header-section">
+    <h1 class="contact-label" v-text="_contact.pageHeader.contactLabel"/>
+    <p class="contact-description" v-text="_contact.pageHeader.contactDescription"/>
   </section>
-  <contact />
+  <contact/>
 </template>
 
 <script setup>
 import Contact from "../components/Contact.vue";
+import getComposable from "../composables";
+
+const _contact = getComposable('contact');
 </script>
+
+<style scoped>
+.contact-header-section {
+  @apply bg-home flex flex-col gap-y-7 md:gap-y-[1.04vw] py-10 md:pt-[4.38vw] md:pb-[5.52vw] max-md:px-5 pl-[20.31vw] max-md:text-center;
+}
+
+.contact-label {
+  @apply text-white text-[max(36px,3.07vw)] font-bold md:font-medium leading-[max(48px,3.44vw)];
+}
+
+.contact-description {
+  @apply text-[#BDC8DB] w-full md:w-1/2 text-[max(16px,1.15vw)] leading-[max(24px,1.61vw)];
+}
+</style>

@@ -17,14 +17,14 @@
                 <p v-text="link.label"/>
                 <button class="pt-1" v-html="state.services ? angleUp : angleDown"/>
               </div>
-              <ul v-if="state.services" class="sub-links">
+              <ul v-if="state.services" class="sub-links" @click="state.navbar=false">
                 <li v-for="(subLink, index) in link.subLinks" :key="index">
                   <router-link :to="{name: subLink.name}" v-text="subLink.label" class="sub-link"/>
                 </li>
               </ul>
             </div>
             <router-link v-else :to="{name: link.name}" v-text="link.label"
-                         :class="{'opacity-60': link.label !== 'Home'}"/>
+                         :class="{'opacity-60': link.name !== router.name}" @click="state.navbar=false"/>
           </li>
         </ul>
         <router-link :to="{name: header.navButton.name}" v-html="header.navButton.label" class="nav-button"/>
@@ -34,9 +34,11 @@
 </template>
 
 <script setup>
-import {useHeader} from "../composables/useHeader.js";
-import {useArrows} from "../composables/useArrows.js";
+import getComposable from "../composables";
+import {useRoute} from "vue-router";
 import {reactive} from "vue";
+
+const router = useRoute();
 
 const state = reactive({
   services: false,
@@ -51,8 +53,8 @@ const toggleNavbar = () => {
   state.navbar = !state.navbar;
 };
 
-const header = useHeader();
-const {angleUp, angleDown} = useArrows();
+const header = getComposable('header');
+const {angleUp, angleDown} = getComposable('arrows');
 </script>
 
 <style scoped>

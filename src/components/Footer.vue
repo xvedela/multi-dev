@@ -4,7 +4,7 @@
       <div class="flex flex-col">
         <component :is="footer.companyLogo" class="mb-12 md:mb-[1.67vw]"/>
         <p class="w-7/12 mb-7 md:mb-[1.35vw] text-sm" v-text="footer.serviceDescription"/>
-        <span class="mb-7 md:mb-[1.3vw]" v-text="footer.followLabel"/>
+        <span class="block mb-7 md:mb-[1.3vw]" v-text="footer.followLabel"/>
         <ul class="flex gap-x-6">
           <li v-for="(link, index) in footer.socialLinks" :key="index">
             <a :href="link.url">
@@ -38,12 +38,9 @@
 </template>
 
 <script setup>
-import {useFooter} from "../composables/useFooter.js";
+import getComposable from "../composables";
 
-const {
-  footer,
-  subFooter,
-} = useFooter();
+const {footer, subFooter} = getComposable('footer');
 </script>
 
 <style scoped>
