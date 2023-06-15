@@ -1,72 +1,33 @@
 <template>
   <header>
     <nav
-        class="bg-header pl-[1.82vw] max-md:pl-4 pr-[1.82vw] max-md:pr-10 py-[1.2vw] max-md:py-5 sticky"
-    >
-      <div class="flex items-center max-md:justify-between">
-        <multi-dev/>
-        <i
-            class="hidden max-md:block hover:cursor-pointer z-10"
-            @click="toggleNavbar"
-            :class="state.navbar ? resNavbar.close : resNavbar.bars"
-        />
-        <div
-            class="md:justify-between md:flex md:text-base md:flex-row md:items-center md:w-full flex-col text-xl"
-            :class="
-            state.navbar
-              ? 'bg-white absolute top-0 left-0 py-4 flex items-center w-full h-[100vh]'
-              : 'hidden'
-          "
-        >
-          <div></div>
-          <ul
-              class="flex gap-x-[2.08vw] text-white max-md:flex-col items-center max-md:text-black max-md:w-full"
-          >
-            <li v-for="(link, index) in headerNavLinks" :key="index">
-              <template v-if="link.to.name === 'Services'">
-                <div class="relative" @click="toggleServices">
-                  <div
-                      class="flex items-center opacity-60 hover:cursor-pointer gap-x-1"
-                  >
-                    <p v-text="link.title"/>
-                    <i
-                        class="pt-1"
-                        :class="
-                        state.services ? arrows.angleUp : arrows.angleDown
-                      "
-                    />
-                  </div>
-                  <ul
-                      v-if="state.services"
-                      class="absolute top-[100%] max-md:left-[-50%] max-md:z-10 flex flex-col rounded-md bg-white min-w-max text-black gap-y-[0.63vw] px-2 py-4"
-                  >
-                    <li v-for="(subLink, index) in link.subLinks" :key="index">
-                      <router-link
-                          :to="subLink.to"
-                          class="bg-white px-[0.42vw] py-[0.16vw] rounded-2xl hover:bg-[#FFB902]"
-                          v-text="subLink.title"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </template>
-              <template v-else>
-                <router-link
-                    :to="link.to"
-                    :class="link._class"
-                    v-text="link.title"
-                />
-              </template>
-            </li>
-          </ul>
-          <router-link
-              :to="navButton.to"
-              class="flex items-center bg-button px-[1.82vw] py-[0.52vw] rounded-3xl gap-x-[0.42vw]"
-          >
-            {{ navButton.text }}
-            <i :class="arrows.arrowRight"/>
-          </router-link>
-        </div>
+        class="flex items-center max-md:justify-between">
+      <component :is="header.companyLogo"/>
+      <button
+          class="block md:hidden z-10"
+          @click="toggleNavbar"
+          v-html="state.navbar ? header.resNavbar.closeIcon : header.resNavbar.menuIcon"
+      />
+      <div class="nav-bar" :class=" state.navbar ? 'open' : 'hidden'">
+        <div></div>
+        <ul class="nav-links">
+          <li v-for="(link, index) in header.navLinks" :key="index">
+            <div v-if="link.name === 'Services'" class="relative" @click="toggleServices">
+              <div class="service-menu">
+                <p v-text="link.label"/>
+                <button class="pt-1" v-html="state.services ? angleUp : angleDown"/>
+              </div>
+              <ul v-if="state.services" class="sub-links">
+                <li v-for="(subLink, index) in link.subLinks" :key="index">
+                  <router-link :to="{name: subLink.name}" v-text="subLink.label" class="sub-link"/>
+                </li>
+              </ul>
+            </div>
+            <router-link v-else :to="{name: link.name}" v-text="link.label"
+                         :class="{'opacity-60': link.label !== 'Home'}"/>
+          </li>
+        </ul>
+        <router-link :to="{name: header.navButton.name}" v-html="header.navButton.label" class="nav-button"/>
       </div>
     </nav>
   </header>
@@ -74,7 +35,7 @@
 
 <script setup>
 import {useHeader} from "../composables/useHeader.js";
-import MultiDev from "../assets/logos/MultiDev.vue";
+import {useArrows} from "../composables/useArrows.js";
 import {reactive} from "vue";
 
 const state = reactive({
@@ -90,5 +51,40 @@ const toggleNavbar = () => {
   state.navbar = !state.navbar;
 };
 
-const {headerNavLinks, navButton, arrows, resNavbar} = useHeader();
+const header = useHeader();
+const {angleUp, angleDown} = useArrows();
 </script>
+
+<style scoped>
+header {
+  @apply bg-header sticky pl-4 md:pl-[1.82vw] pr-10 md:pr-[1.82vw] py-5 md:py-[1.2vw];
+}
+
+.nav-bar {
+  @apply md:w-full md:flex max-md:flex-col md:justify-between text-xl md:text-base;
+}
+
+.open {
+  @apply bg-white w-full h-[100vh] absolute top-0 left-0 flex items-center py-7;
+}
+
+.nav-links {
+  @apply max-md:w-full flex max-md:flex-col items-center gap-x-[2.08vw] text-black md:text-white;
+}
+
+.service-menu {
+  @apply flex items-center hover:cursor-pointer opacity-60 gap-x-1;
+}
+
+.sub-links {
+  @apply bg-white min-w-max absolute top-[100%] max-md:left-[-50%] flex flex-col gap-y-[0.63vw] px-3 py-3 text-black rounded-md max-md:z-10;
+}
+
+.sub-link {
+  @apply px-[0.42vw] py-[0.16vw] rounded-2xl hover:bg-button;
+}
+
+.nav-button {
+  @apply flex items-center bg-button px-[1.82vw] py-[0.52vw] rounded-3xl gap-x-[0.42vw];
+}
+</style>

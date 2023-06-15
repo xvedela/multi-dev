@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer>
     <div class="flex max-md:flex-col justify-between">
       <div class="flex flex-col">
         <component :is="footer.companyLogo" class="mb-12 md:mb-[1.67vw]"/>
@@ -47,7 +47,7 @@ const {
 </script>
 
 <style scoped>
-.footer {
+footer {
   @apply bg-footer flex flex-col pt-[3.91vw] max-md:pt-12 px-5 md:px-[20.31vw] text-white;
 }
 

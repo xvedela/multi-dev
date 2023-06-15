@@ -1,46 +1,42 @@
-import { reactive } from "vue";
+import MultiDev from "../assets/logos/MultiDev.vue";
+import {useArrows} from "./useArrows.js";
+
+const {arrowRight} = useArrows();
 
 export function useHeader() {
-    return reactive({
-        headerNavLinks: [
-            { to: { name: "Home" }, title: "Home" },
-            {
-                to: { name: "Services" },
-                subLinks: [
-                    {
-                        to: { name: "TemplatedWebsites" },
-                        title: "Templated Websites",
-                    },
-                    {
-                        to: { name: "CustomWebsites" },
-                        title: "Custom Websites",
-                    },
-                    {
-                        to: { name: "SearchEngineOptimization" },
-                        title: "Search Engine Optimization",
-                    },
-                ],
-                title: "Services",
-            },
-            { to: { name: "OurWork" }, title: "Our Work", _class: "opacity-60" },
-            { to: { name: "Blog" }, title: "Blog", _class: "opacity-60" },
-            { to: { name: "Contact" }, title: "Contact", _class: "opacity-60" },
+  return {
+    companyLogo: MultiDev,
+    navLinks: [
+      {name: "Home", label: "Home"},
+      {
+        name: "Services",
+        label: "Services",
+        subLinks: [
+          {
+            name: "TemplatedWebsites",
+            label: "Templated Websites",
+          },
+          {
+            name: "CustomWebsites",
+            label: "Custom Websites",
+          },
+          {
+            name: "SearchEngineOptimization",
+            label: "Search Engine Optimization",
+          },
         ],
-
-        navButton: {
-            to: { name: "Contact" },
-            text: "Let's Talk",
-        },
-
-        arrows: {
-            angleDown: "fa-solid fa-angle-down",
-            angleUp: "fa-solid fa-angle-up",
-            arrowRight: "fa-solid fa-arrow-right text-black",
-        },
-
-        resNavbar: {
-            bars: "fa-solid fa-xl fa-bars text-white",
-            close: "fa-solid fa-xl fa-x",
-        },
-    });
+      },
+      {name: "OurWork", label: "Our Work"},
+      {name: "Blog", label: "Blog"},
+      {name: "Contact", label: "Contact"},
+    ],
+    navButton: {
+      name: "Contact",
+      label: `Let's Talk ${arrowRight}`,
+    },
+    resNavbar: {
+      menuIcon: '<i class="fa-solid fa-xl fa-bars  text-white"/>',
+      closeIcon: '<i class="fa-solid fa-xl fa-x"/>',
+    },
+  }
 }
