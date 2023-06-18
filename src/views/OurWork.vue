@@ -27,10 +27,10 @@
   </div>
   <section>
     <div
-        class="bg-home flex flex-col md:items-center gap-y-2 md:gap-y-1 py-[max(40px,4.38vw)] max-md:pl-5 max-md:text-left;">
-      <p class="text-white text-[max(24px,3vw)]"
+        class="bg-home flex flex-col md:items-center gap-y-2 py-10 md:py-20 max-md:pl-5 max-lg:text-left  text-2xl lg:text-6xl">
+      <p class="text-white"
          v-text="footer.label"/>
-      <router-link class="w-fit text-button text-[max(24px,3.18vw)] underline"
+      <router-link class="w-fit text-button underline"
                    :to="{ name: footer.contact.name }"
                    v-text="footer.contact.text"/>
     </div>
