@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         'header': "#5A58AB",
+        'desc': "#BDC8DB",
         'home': "#6967CE",
         'input': "#F4F8FB",
         'button': "#FFB902",
