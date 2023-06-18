@@ -1,40 +1,66 @@
 <template>
   <header>
-    <nav
-        class="flex items-center max-md:justify-between">
+    <nav class="flex items-center max-md:justify-between">
       <component :is="header.companyLogo"/>
       <button
           class="block md:hidden z-10"
           @click="toggleNavbar"
-          v-html="state.navbar ? header.resNavbar.closeIcon : header.resNavbar.menuIcon"
+          v-html="
+          state.navbar ? header.resNavbar.closeIcon : header.resNavbar.menuIcon
+        "
       />
-      <div class="nav-bar" :class=" state.navbar ? 'open' : 'hidden'">
+      <div class="nav-bar" :class="state.navbar ? 'open' : 'hidden'">
         <div></div>
         <ul class="nav-links">
           <li v-for="(link, index) in header.navLinks" :key="index">
-            <div v-if="link.name === 'Services'" class="relative" @click="toggleServices">
+            <div
+                v-if="link.name === 'Services'"
+                class="relative"
+                @click="toggleServices"
+            >
               <div class="service-menu">
                 <p v-text="link.label"/>
-                <button class="pt-1" v-html="state.services ? angleUp : angleDown"/>
+                <button
+                    class="pt-1"
+                    v-html="state.services ? arrows.angleUp : arrows.angleDown"
+                />
               </div>
-              <ul v-if="state.services" class="sub-links" @click="state.navbar=false">
+              <ul
+                  v-if="state.services"
+                  class="sub-links"
+                  @click="state.navbar = false"
+              >
                 <li v-for="(subLink, index) in link.subLinks" :key="index">
-                  <router-link :to="{name: subLink.name}" v-text="subLink.label" class="sub-link"/>
+                  <router-link
+                      :to="{ name: subLink.name }"
+                      v-text="subLink.label"
+                      class="sub-link"
+                  />
                 </li>
               </ul>
             </div>
-            <router-link v-else :to="{name: link.name}" v-text="link.label"
-                         :class="{'opacity-60': link.name !== router.name}" @click="state.navbar=false"/>
+            <router-link
+                v-else
+                :to="{ name: link.name }"
+                v-text="link.label"
+                :class="{ 'opacity-60': link.name !== router.name }"
+                @click="state.navbar = false"
+            />
           </li>
         </ul>
-        <router-link :to="{name: header.navButton.name}" v-html="header.navButton.label" class="nav-button"/>
+        <router-link
+            :to="{ name: header.navButton.name }"
+            v-html="header.navButton.label"
+            class="nav-button"
+        />
       </div>
     </nav>
   </header>
 </template>
 
 <script setup>
-import getComposable from "../composables";
+import useHeader from "../composables/useHeader";
+import useArrows from "../composables/useArrows";
 import {useRoute} from "vue-router";
 import {reactive} from "vue";
 
@@ -53,8 +79,8 @@ const toggleNavbar = () => {
   state.navbar = !state.navbar;
 };
 
-const header = getComposable('header');
-const {angleUp, angleDown} = getComposable('arrows');
+const header = useHeader();
+const arrows = useArrows();
 </script>
 
 <style scoped>

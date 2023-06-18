@@ -1,20 +1,22 @@
 <template>
-  <section class="contact-header-section">
-    <h1 class="contact-label" v-text="_contact.pageHeader.contactLabel"/>
-    <p class="contact-description" v-text="_contact.pageHeader.contactDescription"/>
+  <section>
+    <h1 class="contact-label" v-text="header.label"/>
+    <p
+        class="contact-description"
+        v-text="header.text"
+    />
   </section>
-  <contact/>
+  <component :is="form.component"/>
 </template>
 
 <script setup>
-import Contact from "../components/Contact.vue";
-import getComposable from "../composables";
+import useContact from "../composables/useContact.js";
 
-const _contact = getComposable('contact');
+const {header, form} = useContact();
 </script>
 
 <style scoped>
-.contact-header-section {
+section:first-child {
   @apply bg-home flex flex-col gap-y-7 md:gap-y-[1.04vw] py-10 md:pt-[4.38vw] md:pb-[5.52vw] max-md:px-5 pl-[20.31vw] max-md:text-center;
 }
 

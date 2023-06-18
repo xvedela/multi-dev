@@ -1,9 +1,9 @@
 import MultiDev from "../assets/logos/MultiDev.vue";
 import useArrows from "./useArrows.js";
 
-const {arrowRight} = useArrows();
+const arrows = useArrows();
 
-export default () => ({
+const useHeader = () => ({
   companyLogo: MultiDev,
   navLinks: [
     {name: "Home", label: "Home"},
@@ -19,10 +19,6 @@ export default () => ({
           name: "CustomWebsites",
           label: "Custom Websites",
         },
-        {
-          name: "SearchEngineOptimization",
-          label: "Search Engine Optimization",
-        },
       ],
     },
     {name: "OurWork", label: "Our Work"},
@@ -30,10 +26,12 @@ export default () => ({
   ],
   navButton: {
     name: "Contact",
-    label: `Let's Talk ${arrowRight}`,
+    label: `Let's Talk ${arrows.arrowRight}`,
   },
   resNavbar: {
     menuIcon: '<i class="fa-solid fa-xl fa-bars  text-white"/>',
     closeIcon: '<i class="fa-solid fa-xl fa-x"/>',
   },
-})
+});
+
+export default useHeader;

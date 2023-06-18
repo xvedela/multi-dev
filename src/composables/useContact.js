@@ -1,10 +1,14 @@
-export default () => ({
-  pageHeader: {
-    contactLabel: "Contact Us",
-    contactDescription: "Whether you're needing help with a new project or just want to pick our brain we're here for you!",
-  },
-  form: {
-    beforeLabel: "READY TO GET STARTED?",
+import Contact from "../components/Contact.vue";
+
+export default (function useContact() {
+  const header = {
+    label: "Contact Us",
+    text:
+      "Whether you're needing help with a new project or just want to pick our brain we're here for you!",
+  };
+  const form = {
+    component: Contact,
+    before: "READY TO GET STARTED?",
     label: "Let's Grow Together.",
     fields: [
       {
@@ -28,6 +32,7 @@ export default () => ({
         required: false,
       },
     ],
-    buttonLabel: "Submit",
-  }
+    button: "Submit",
+  };
+  return {header, form};
 });
