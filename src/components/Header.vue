@@ -11,7 +11,7 @@
            :class="state.navbar ? 'open' : 'hidden'">
         <div></div>
         <ul class="max-md:w-full flex max-md:flex-col items-center gap-x-[2.1vw] text-black md:text-white">
-          <li v-for="(link, index) in links" :key="index">
+          <li v-for="(link, index) in links._" :key="index">
             <div
                 v-if="link.name === 'Services'"
                 class="relative inline-block"
