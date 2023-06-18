@@ -1,7 +1,7 @@
 import MultiDev from "../assets/logos/MultiDev.vue";
 
 const useFooter = () => ({
-  companyLogo: MultiDev,
+  logo: MultiDev,
   serviceDescription:
     "We help businesses generate more revenue through strategic web design and SEO services.",
   followLabel: "Follow Us",

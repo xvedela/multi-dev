@@ -1,37 +1,16 @@
-import MultiDev from "../assets/logos/MultiDev.vue";
 import useArrows from "./useArrows.js";
+import useNavigation from "./useNavigation.js";
 
 const arrows = useArrows();
 
-const useHeader = () => ({
-  companyLogo: MultiDev,
-  navLinks: [
-    {name: "Home", label: "Home"},
-    {
-      name: "Services",
-      label: "Services",
-      subLinks: [
-        {
-          name: "TemplatedWebsites",
-          label: "Templated Websites",
-        },
-        {
-          name: "CustomWebsites",
-          label: "Custom Websites",
-        },
-      ],
-    },
-    {name: "OurWork", label: "Our Work"},
-    {name: "Blog", label: "Blog"},
-  ],
-  navButton: {
+export default (function useHeader() {
+  const button = {
     name: "Contact",
-    label: `Let's Talk ${arrows.arrowRight}`,
-  },
-  resNavbar: {
-    menuIcon: '<i class="fa-solid fa-xl fa-bars  text-white"/>',
-    closeIcon: '<i class="fa-solid fa-xl fa-x"/>',
-  },
+    label: `Let's Talk`,
+  };
+  const res = {
+    menu: '<i class="fa-solid fa-xl fa-bars  text-white"/>',
+    close: '<i class="fa-solid fa-xl fa-x"/>',
+  };
+  return {...useNavigation(), button, res, arrows};
 });
-
-export default useHeader;
