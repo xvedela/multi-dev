@@ -41,8 +41,8 @@
           </li>
         </ul>
         <router-link :to="{ name: button.name }"
-                     class="flex items-center bg-button px-[1.8vw] py-[0.5vw] rounded-3xl gap-x-[0.5vw]"
-                     v-html="button.label + arrows.right"/>
+                     class="flex items-center bg-button px-[1.8vw] py-[0.5vw] rounded-4xl gap-x-[0.5vw]"
+                     v-html="button.label"/>
       </div>
     </nav>
   </header>

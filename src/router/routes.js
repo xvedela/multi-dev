@@ -21,6 +21,11 @@ const routes = [
         name: "TemplatedWebsites",
         component: () => import("../views/TemplatedWebSites.vue"),
       },
+      {
+        path: "searchEngineOptimization",
+        name: "Search Engine Optimization",
+        component: () => import("../views/SearchEngineOptimization.vue"),
+      }
     ],
   },
   {

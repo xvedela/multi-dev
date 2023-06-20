@@ -4,7 +4,6 @@ export default (function () {
   let {logo, links} = useNavigation();
   links._.splice(2, 0, ...links._[1].subLinks);
   links._.splice(1, 1);
-  console.log(links);
   const text = "We help businesses generate more revenue through strategic web design and SEO services.";
   const label = "Follow Us";
   const social = [
