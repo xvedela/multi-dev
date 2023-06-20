@@ -18,6 +18,8 @@ import SEO from "../assets/icons/SEO.vue";
 import useArrows from "./useArrows.js";
 
 const {right} = useArrows();
+const getImgUrl = (imgName) =>
+  new URL(`../assets/clients/${imgName}`, import.meta.url).href;
 
 
 export default (function useHome() {
@@ -65,7 +67,7 @@ that drive real results.`,
 
   const icons = [
     {
-      icon: CW,
+      _: CW,
       label: 'Custom Websites',
       text: `Whether you’re looking to build a custom
 marketing website or the next Twitter we can
@@ -73,7 +75,7 @@ help you build it.`,
       name: 'customWebsites'
     },
     {
-      icon: SEO,
+      _: SEO,
       label: 'Search Engine Optimization',
       text: `You’ve got yourself a beautiful website but now
 you need your customers to find it, let us help
@@ -87,7 +89,67 @@ you.`,
     logos: [
       Figma, Wordpress, Woo, Shopify, Vue, Laravel,
     ],
-  }
+  };
 
-  return {upCity, header, buttons, partners, icons, techsHeader, techs}
+  const clients = {
+    label: 'Hear It From Our Clients',
+    _: [
+      {
+        img: getImgUrl("1661371646793-300x300.png"),
+        name: 'Jennifer Hall',
+        company: 'AegisLiving',
+        feedback: `Icepick was able to help us get a very difficult web redesign
+project across the finish line and continues to manage a large list
+of projects to help improve user experience and SEO. The team is
+knowledgeable, highly skilled and very responsive.`,
+      },
+      {
+        img: getImgUrl("jeff-300x300.png"),
+        name: 'Jeff Rasansky',
+        company: 'JR Law Firm',
+        feedback: `The guys at Icepick do an amazing job, and have helped us with
+more than one website. Always professional, quick to respond,
+great eye for design, and more than willing to help if anything
+comes up!`,
+      },
+      {
+        img: getImgUrl("sondra-300x300.png"),
+        name: 'Sondra Heffernan',
+        company: 'Infowerks',
+        feedback: `Icepick recently updated our company website. Our company is
+beyond happy with our new design, the delivery, and their
+professionalism in working with multiple decision makers. Looking
+forward to working with Icepick on future projects.`,
+      },
+      {
+        img: getImgUrl("1661371646793-300x300.png"),
+        name: 'Jennifer Hall',
+        company: 'AegisLiving',
+        feedback: `Icepick was able to help us get a very difficult web redesign
+project across the finish line and continues to manage a large list
+of projects to help improve user experience and SEO. The team is
+knowledgeable, highly skilled and very responsive.`,
+      },
+      {
+        img: getImgUrl("jeff-300x300.png"),
+        name: 'Jeff Rasansky',
+        company: 'JR Law Firm',
+        feedback: `The guys at Icepick do an amazing job, and have helped us with
+more than one website. Always professional, quick to respond,
+great eye for design, and more than willing to help if anything
+comes up!`,
+      },
+      {
+        img: getImgUrl("sondra-300x300.png"),
+        name: 'Sondra Heffernan',
+        company: 'Infowerks',
+        feedback: `Icepick recently updated our company website. Our company is
+beyond happy with our new design, the delivery, and their
+professionalism in working with multiple decision makers. Looking
+forward to working with Icepick on future projects.`,
+      },
+    ],
+  };
+
+  return {upCity, header, buttons, partners, icons, techsHeader, techs, clients}
 });

@@ -50,14 +50,14 @@
   <section class="flex flex-col items-center gap-y-20 md:gap-y-44 mb-28 md:mb-20 mt-7 md:mt-24 max-sm:mx-5">
     <div class="sm:w-[60vw] flex flex-col items-center gap-y gap-y-20 md:gap-y-16">
       <div class="md:w-3/5 flex flex-col gap-y-5 text-center">
-        <h2 v-html="techsHeader.label" class="text-label font-semibold text-2xl md:text-4xl tracking-tight"/>
+        <h2 v-html="techsHeader.label" class="text-label font-semibold text-2xl md:text-4xl -tracking-tight"/>
         <p v-text="techsHeader.text" class="text-[#52627A] md:text-lg"/>
       </div>
       <div class="bg-home flex max-md:flex-col rounded-3xl text-white max-md:gap-y-8">
         <div v-for="(icon, index) in icons" :key="index"
              class="md:w-1/2 flex flex-col items-center gap-y-5 px-20 py-8 md:pb-16 md:pt-20 text-center">
           <div class="bg-[#8AC0FF1A] w-24 h-24 rounded-[50%] flex justify-center items-center">
-            <component :is="icon.icon"/>
+            <component :is="icon._"/>
           </div>
           <h3 v-text="icon.label"/>
           <p v-text="icon.text" class="text-desc"/>
@@ -67,7 +67,7 @@
       </div>
     </div>
     <div class="w-fit flex flex-col items-center gap-y-8 md:gap-y-14">
-      <h2 v-text="techs.label" class="text-label font-semibold text-2xl md:text-4xl tracking-tight"/>
+      <h2 v-text="techs.label" class="text-label font-semibold text-2xl md:text-4xl -tracking-tight"/>
       <ul class="flex gap-x-20">
         <li v-for="(logo, index) in techs.logos" :key="index">
           <component :is="logo"/>
@@ -75,10 +75,41 @@
       </ul>
     </div>
   </section>
+  <section class="bg-[#EEF2F6] flex flex-col gap-y-5 md:gap-y-12 items-center py-7 md:py-20">
+    <h2 v-text="clients.label" class="text-label -tracking-tight text-2xl md:text-4xl font-medium"/>
+    <carousel :autoplay="2000" v-bind="settings" :breakpoints="breakpoints" :wrap-around="true">
+      <slide v-for="(client, index) in clients._" :key="index">
+        <div
+            class="flex flex-col items-center gap-y-6 mx-2.5 justify-center py-8 px-3 md:px-11 bg-white text-center rounded-3xl">
+          <img :src="client.img" :alt="client.name + ' image'"/>
+          <span v-text="client.name" class="text-label text-xl -tracking-tight"/>
+          <a href="#" v-text="client.company" class="-mt-3 text-[#23A6F0] text-sm"/>
+          <p v-text="client.feedback" class="text-[#52627A]"/>
+        </div>
+      </slide>
+      <template #addons>
+        <navigation/>
+      </template>
+    </carousel>
+  </section>
 </template>
 
 <script setup>
 import useHome from "../composables/useHome.js";
+import {Carousel, Slide, Navigation} from "vue3-carousel";
+import 'vue3-carousel/dist/carousel.css'
 
-const {upCity, header, buttons, partners, icons, techsHeader, techs} = useHome();
+const settings = {
+  itemsToShow: 1,
+  snapAlign: 'center',
+};
+
+const breakpoints = {
+  786: {
+    itemsToShow: 2.5,
+    snapAlign: 'center',
+  },
+};
+
+const {upCity, header, buttons, partners, icons, techsHeader, techs, clients} = useHome();
 </script>
