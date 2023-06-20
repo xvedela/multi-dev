@@ -40,6 +40,9 @@ export default (function useHome() {
     ow: 'Our Work <i class="fa-solid fa-arrow-right text-white"/>',
     lm: `Learn More ${right}`,
     vap: 'View All Projects <i class="fa-solid fa-arrow-right text-white"/>',
+    lt: `Let's Talk ${right}`,
+    rm: `Read More ${right}`,
+    vapo: `View All Posts ${right}`,
   };
 
 
@@ -135,5 +138,28 @@ forward to working with Icepick on future projects.`,
     ],
   };
 
-  return {upCity, header, buttons, partners, icons, techsHeader, techs, clients, projects}
+  const posts = {
+    label: 'Recent Posts',
+    _: [
+      {
+        label: `10 Landing Page Do’s and Don’ts`,
+        img: getImgUrl('posts', '10-Landing-Page-Dos-and-Donts-1024x534.jpg'),
+      },
+      {
+        label: `10 Simple Ways to Improve Your Website Copy for Higher Conversions`,
+        img: getImgUrl('posts', 'improve-your-website-copy-1.jpg'),
+      },
+      {
+        label: `Custom WordPress Development: A Comprehensive Guide`,
+        img: getImgUrl('posts', 'photo-1454165205744-3b78555e5572-845x563-1.jpg'),
+      },
+    ]
+  }
+
+  const footer = {
+    label: 'Want to see if Icepick is the right fit for you?',
+    text: 'Give us a shout and let’s see if we’re the right match for you and your business!',
+  }
+
+  return {upCity, header, buttons, partners, icons, techsHeader, techs, clients, projects, posts, footer}
 });

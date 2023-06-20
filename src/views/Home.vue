@@ -95,9 +95,36 @@
   <section class="bg-home flex flex-col items-center gap-y-5 md:gap-y-14 pb-12 md:pb-20 pt-7 md:pt-20 max-sm:px-5">
     <h2 v-text="projects.label" class="text-white -tracking-tight text-2xl md:text-4xl font-medium"/>
     <div class="sm:w-[60vw] grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-5">
-      <img v-for="(project, index) in projects._" :key="index" :src="project.img" alt="project img"/>
+      <img v-for="(project, index) in projects._" :key="index" :src="project" alt="project img"/>
     </div>
-    <a href="#" v-html="buttons.vap" class="flex gap-x-2 items-center px-8 py-4 border-2 border-desc rounded-4xl text-white"/>
+    <a href="#" v-html="buttons.vap"
+       class="flex gap-x-2 items-center px-8 py-4 border-2 border-desc rounded-4xl text-white"/>
+  </section>
+  <section class="flex flex-col items-center gap-y-32 md:gap-y-28 max-sm:mx-5">
+    <div class="mt-16 flex flex-col items-center gap-y-12">
+      <h2 v-text="posts.label" class="text-label -tracking-tight text-2xl md:text-4xl font-medium"/>
+      <div class="md:w-8/12 flex max-md:flex-col justify-center gap-x-7 gap-y-10">
+        <div v-for="(post, index) in posts._" :key="index" class="flex flex-col max-md:items-center gap-y-2">
+          <img :src="post.img" alt="post img"/>
+          <h3 v-text="post.label" class="font-medium text-lg"/>
+          <span v-html="buttons.rm" class="block text-[#23A6F0]"/>
+        </div>
+      </div>
+      <a href="#" v-html="buttons.vapo"
+         class="w-fit flex gap-x-2 items-center px-8 py-4 border-2 border-desc rounded-4xl text-label"/>
+    </div>
+    <div
+        class="bg-home text-[#97A5BF] md:text-lg rounded-3xl p-7 md:py-20 mb-32 md:mb-12 ">
+      <div class="text-center w-2/3 flex flex-col items-center mx-auto gap-y-8">
+        <h2 class="text-white -tracking-tight text-xl md:text-4xl font-medium md:font-semibold" v-text="footer.label"/>
+        <p v-text="footer.text"/>
+        <router-link
+            :to="{ name: 'Contact' }"
+            v-html="buttons.lt"
+            class="w-fit bg-button flex items-center gap-x-2 px-8 py-4 text-black rounded-4xl"
+        />
+      </div>
+    </div>
   </section>
 </template>
 
@@ -118,5 +145,5 @@ const breakpoints = {
   },
 };
 
-const {upCity, header, buttons, partners, icons, techsHeader, techs, clients, projects} = useHome();
+const {upCity, header, buttons, partners, icons, techsHeader, techs, clients, projects, posts, footer} = useHome();
 </script>
