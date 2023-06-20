@@ -23,7 +23,7 @@ const routes = [
       },
       {
         path: "searchEngineOptimization",
-        name: "Search Engine Optimization",
+        name: "SearchEngineOptimization",
         component: () => import("../views/SearchEngineOptimization.vue"),
       }
     ],

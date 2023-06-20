@@ -61,7 +61,7 @@
           </div>
           <h3 v-text="icon.label"/>
           <p v-text="icon.text" class="text-desc"/>
-          <router-link :to="icon.name" v-html="buttons.lm"
+          <router-link :to="{name: icon.name}" v-html="buttons.lm"
                        class="flex gap-x-2 items-center px-8 py-4 border-2 border-desc rounded-4xl"/>
         </div>
       </div>
@@ -92,6 +92,13 @@
       </template>
     </carousel>
   </section>
+  <section class="bg-home flex flex-col items-center gap-y-5 md:gap-y-14 pb-12 md:pb-20 pt-7 md:pt-20 max-sm:px-5">
+    <h2 v-text="projects.label" class="text-white -tracking-tight text-2xl md:text-4xl font-medium"/>
+    <div class="sm:w-[60vw] grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-5">
+      <img v-for="(project, index) in projects._" :key="index" :src="project.img" alt="project img"/>
+    </div>
+    <a href="#" v-html="buttons.vap" class="flex gap-x-2 items-center px-8 py-4 border-2 border-desc rounded-4xl text-white"/>
+  </section>
 </template>
 
 <script setup>
@@ -111,5 +118,5 @@ const breakpoints = {
   },
 };
 
-const {upCity, header, buttons, partners, icons, techsHeader, techs, clients} = useHome();
+const {upCity, header, buttons, partners, icons, techsHeader, techs, clients, projects} = useHome();
 </script>
