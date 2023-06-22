@@ -1,13 +1,5 @@
-import Contact from "../../components/Contact.vue";
-
-export default (function useContact() {
-  const header = {
-    label: "Contact Us",
-    text:
-      "Whether you're needing help with a new project or just want to pick our brain we're here for you!",
-  };
+export default function useContact() {
   const form = {
-    component: Contact,
     before: "READY TO GET STARTED?",
     label: "Let's Grow Together.",
     fields: [
@@ -34,5 +26,5 @@ export default (function useContact() {
     ],
     button: "Submit",
   };
-  return {header, form};
-});
+  return {form};
+};

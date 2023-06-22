@@ -1,17 +1,15 @@
 <template>
-  <section
-      class="bg-home flex flex-col gap-y-5 md:gap-y-[1vw] py-9 md:pt-[4vw] md:pb-[5vw] pl-[20vw] max-md:px-5 max-md:text-center">
-    <h1 class="text-white text-[max(36px,3vw)] font-bold md:font-medium" v-text="header.label"/>
-    <p
-        class="text-desc w-full md:w-1/2 text-[max(16px,1vw)]"
-        v-text="header.text"
-    />
+  <section class="bg-home component py-10 md:py-20 max-md:text-center">
+    <h1 class="mb-7 md:mb-5 text-white text-4xl md:text-6xl font-bold md:font-medium">
+      Contact Us
+    </h1>
+    <p class="md:w-3/5 text-desc md:text-xl">
+      Whether you're needing help with a new project or just want to pick our brain we're here for you!
+    </p>
   </section>
-  <component :is="form.component"/>
+  <contact/>
 </template>
 
 <script setup>
-import useContact from "../composables/components/useContact.js";
-
-const {header, form} = useContact();
+import Contact from "../components/Contact.vue";
 </script>
