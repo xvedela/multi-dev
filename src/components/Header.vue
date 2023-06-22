@@ -49,7 +49,7 @@
 </template>
 
 <script setup>
-import useHeader from "../composables/useHeader.js";
+import useHeader from "../composables/components/useHeader.js";
 import {useRoute} from "vue-router";
 import {reactive} from "vue";
 

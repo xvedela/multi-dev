@@ -1,4 +1,4 @@
-import Contact from "../components/Contact.vue";
+import Contact from "../../components/Contact.vue";
 
 export default (function useContact() {
   const header = {

@@ -75,23 +75,7 @@
       </ul>
     </div>
   </section>
-  <section class="bg-[#EEF2F6] flex flex-col gap-y-5 md:gap-y-12 items-center py-7 md:py-20">
-    <h2 v-text="clients.label" class="text-label -tracking-tight text-2xl md:text-4xl font-medium"/>
-    <carousel :autoplay="2000" v-bind="settings" :breakpoints="breakpoints" :wrap-around="true">
-      <slide v-for="(client, index) in clients._" :key="index">
-        <div
-            class="flex flex-col items-center gap-y-6 mx-2.5 justify-center py-8 px-3 md:px-11 bg-white text-center rounded-3xl">
-          <img :src="client.img" :alt="client.name + ' image'"/>
-          <span v-text="client.name" class="text-label text-xl -tracking-tight"/>
-          <a href="#" v-text="client.company" class="-mt-3 text-[#23A6F0] text-sm"/>
-          <p v-text="client.feedback" class="text-[#52627A]"/>
-        </div>
-      </slide>
-      <template #addons>
-        <navigation/>
-      </template>
-    </carousel>
-  </section>
+  <reviews />
   <section class="bg-home flex flex-col items-center gap-y-5 md:gap-y-14 pb-12 md:pb-20 pt-7 md:pt-20 max-sm:px-5">
     <h2 v-text="projects.label" class="text-white -tracking-tight text-2xl md:text-4xl font-medium"/>
     <div class="sm:w-[60vw] grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-5">
@@ -100,7 +84,7 @@
     <a href="#" v-html="buttons.vap"
        class="flex gap-x-2 items-center px-8 py-4 border-2 border-desc rounded-4xl text-white"/>
   </section>
-  <section class="flex flex-col items-center gap-y-32 md:gap-y-28 max-sm:mx-5">
+  <section class="flex flex-col items-center gap-y-32 md:gap-y-28 max-sm:mx-5 ">
     <div class="mt-16 flex flex-col items-center gap-y-12">
       <h2 v-text="posts.label" class="text-label -tracking-tight text-2xl md:text-4xl font-medium"/>
       <div class="md:w-8/12 flex max-md:flex-col justify-center gap-x-7 gap-y-10">
@@ -129,21 +113,8 @@
 </template>
 
 <script setup>
-import useHome from "../composables/useHome.js";
-import {Carousel, Slide, Navigation} from "vue3-carousel";
-import 'vue3-carousel/dist/carousel.css'
-
-const settings = {
-  itemsToShow: 1,
-  snapAlign: 'center',
-};
-
-const breakpoints = {
-  786: {
-    itemsToShow: 2.5,
-    snapAlign: 'center',
-  },
-};
+import useHome from "../composables/views/useHome.js";
+import Reviews from "../components/Reviews.vue";
 
 const {upCity, header, buttons, partners, icons, techsHeader, techs, clients, projects, posts, footer} = useHome();
 </script>

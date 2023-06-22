@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import useContact from "../composables/useContact.js";
+import useContact from "../composables/components/useContact.js";
 
 const {header, form} = useContact();
 </script>

@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import useContact from "../composables/useContact";
+import useContact from "../composables/components/useContact.js";
 
 const {form} = useContact();
 </script>

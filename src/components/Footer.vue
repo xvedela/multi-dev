@@ -45,7 +45,7 @@
 </template>
 
 <script setup>
-import useFooter from "../composables/useFooter";
+import useFooter from "../composables/components/useFooter.js";
 
 const {logo, links, text, label, social, companies, sub} = useFooter();
 </script>

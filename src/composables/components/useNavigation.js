@@ -1,4 +1,4 @@
-import MultiDev from "../assets/logos/MultiDev.vue";
+import MultiDev from "../../assets/logos/MultiDev.vue";
 
 export default (function useNavigation() {
   const logo = MultiDev;

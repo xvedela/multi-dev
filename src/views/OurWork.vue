@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-import useOurWork from "../composables/useOurWork.js";
+import useOurWork from "../composables/views/useOurWork.js";
 
 const {header, projects, footer} = useOurWork();
 </script>

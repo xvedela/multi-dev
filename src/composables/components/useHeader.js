@@ -1,4 +1,4 @@
-import useArrows from "./useArrows.js";
+import useArrows from "../helpers/useArrows.js";
 import useNavigation from "./useNavigation.js";
 
 const arrows = useArrows();

@@ -1,21 +1,21 @@
-import UpCity from "../assets/logos/UpCity.vue";
+import UpCity from "../../assets/logos/UpCity.vue";
 
-import AegisLiving from "../assets/logos/LogoAegisLiving.vue";
-import KojimaConstructionsStore from "../assets/logos/LogoKojimaConstructionsStore.vue";
-import DoctorButlers from "../assets/logos/LogoDoctorButlers.vue";
-import IrisTelehealth from "../assets/logos/LogoIrisTelehealth.vue";
-import UnitedWay from "../assets/logos/LogoUnitedWay.vue";
+import AegisLiving from "../../assets/logos/LogoAegisLiving.vue";
+import KojimaConstructionsStore from "../../assets/logos/LogoKojimaConstructionsStore.vue";
+import DoctorButlers from "../../assets/logos/LogoDoctorButlers.vue";
+import IrisTelehealth from "../../assets/logos/LogoIrisTelehealth.vue";
+import UnitedWay from "../../assets/logos/LogoUnitedWay.vue";
 
-import Figma from "../assets/techs/Figma.vue";
-import Wordpress from "../assets/techs/Wordpress.vue";
-import Woo from "../assets/techs/Woo.vue";
-import Shopify from "../assets/techs/Shopify.vue";
-import Vue from "../assets/techs/Vue.vue";
-import Laravel from "../assets/techs/Laravel.vue";
+import Figma from "../../assets/techs/Figma.vue";
+import Wordpress from "../../assets/techs/Wordpress.vue";
+import Woo from "../../assets/techs/Woo.vue";
+import Shopify from "../../assets/techs/Shopify.vue";
+import Vue from "../../assets/techs/Vue.vue";
+import Laravel from "../../assets/techs/Laravel.vue";
 
-import CW from "../assets/icons/CW.vue";
-import SEO from "../assets/icons/SEO.vue";
-import useArrows from "./useArrows.js";
+import CW from "../../assets/icons/CW.vue";
+import SEO from "../../assets/icons/SEO.vue";
+import useArrows from "../helpers/useArrows.js";
 
 const {right} = useArrows();
 const getImgUrl = (directory, imgName) =>
