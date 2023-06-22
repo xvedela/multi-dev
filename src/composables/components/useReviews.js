@@ -1,13 +1,16 @@
 import useHelpers from '../helpers/useHelpers.js';
 
-const {generateImageUrl} = useHelpers();
+const {createIUG} = useHelpers();
+const IUG = createIUG();
+
+IUG.setDirectory('clients');
 
 export default function useReviews() {
     return {
         heading: 'Hear It From Our Clients',
         reviews: [
             {
-                img: generateImageUrl('clients', '1661371646793-300x300.png'),
+                img: IUG.generateImageUrl('1661371646793-300x300.png'),
                 author: 'Jennifer Hall',
                 company: 'AegisLiving',
                 text: `Icepick was able to help us get a very difficult web redesign
@@ -16,7 +19,7 @@ of projects to help improve user experience and SEO. The team is
 knowledgeable, highly skilled and very responsive.`,
             },
             {
-                img: generateImageUrl('clients', 'jeff-300x300.png'),
+                img: IUG.generateImageUrl('jeff-300x300.png'),
                 author: 'Jeff Rasansky',
                 company: 'JR Law Firm',
                 text: `The guys at Icepick do an amazing job, and have helped us with
@@ -25,7 +28,7 @@ great eye for design, and more than willing to help if anything
 comes up!`,
             },
             {
-                img: generateImageUrl('clients', 'sondra-300x300.png'),
+                img: IUG.generateImageUrl('sondra-300x300.png'),
                 author: 'Sondra Heffernan',
                 company: 'Infowerks',
                 text: `Icepick recently updated our company website. Our company is

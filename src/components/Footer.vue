@@ -2,7 +2,7 @@
   <footer class="bg-footer flex flex-col pt-12 md:pt-[4vw] px-5 md:px-[20vw] text-white">
     <div class="flex max-md:flex-col justify-between">
       <div class="flex flex-col gap-y-7">
-        <component :is="logo"/>
+        <img :src="logo" alt="multi dev logo" class="w-fit"/>
         <p
             class="w-7/12 text-sm"
             v-text="text"

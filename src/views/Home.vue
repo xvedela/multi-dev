@@ -11,7 +11,7 @@
         </ul>
         <p v-text="'5.0 Rating'"/>
         <span class="text-desc" v-text="'|'"/>
-        <component :is="upCity.logo"/>
+        <img :src="upCity.logo" alt="upcity logo"/>
       </a>
       <h1
           v-text="header.label"
@@ -42,7 +42,7 @@
       ></h5>
       <ul class="flex items-center gap-x-11">
         <li v-for="(logo, index) in partners.logos" :key="index">
-          <component :is="logo"/>
+          <img :src="logo" alt="partner logo"/>
         </li>
       </ul>
     </div>
@@ -70,22 +70,22 @@
   </section>
   <reviews/>
   <projects/>
-  <section class="flex flex-col items-center gap-y-32 md:gap-y-28 max-sm:mx-5 ">
-    <div class="mt-16 flex flex-col items-center gap-y-12">
-      <h2 v-text="posts.label" class="text-label -tracking-tight text-2xl md:text-4xl font-medium"/>
-      <div class="md:w-8/12 flex max-md:flex-col justify-center gap-x-7 gap-y-10">
-        <div v-for="(post, index) in posts._" :key="index" class="flex flex-col max-md:items-center gap-y-2">
+  <section class="px-5 md:px-[20vw] flex flex-col items-center gap-y-32 md:gap-y-28 pt-16 pb-32 md:pb-12 max-xl:mx-5">
+    <div class="flex flex-col items-center gap-y-12">
+      <h2 v-text="posts.label" class="text-label text-2xl md:text-4xl font-medium"/>
+      <div class="flex max-md:flex-col gap-x-7 gap-y-10">
+        <div v-for="(post, index) in posts._" :key="index" class="flex flex-col gap-y-2.5">
           <img :src="post.img" alt="post img"/>
           <h3 v-text="post.label" class="font-medium text-lg"/>
           <span v-html="buttons.rm" class="block text-[#23A6F0]"/>
         </div>
       </div>
       <a href="#" v-html="buttons.vapo"
-         class="w-fit flex gap-x-2 items-center px-8 py-4 border-2 border-desc rounded-4xl text-label"/>
+         class="flex items-center gap-x-2 px-8 py-4 border-2 border-desc rounded-4xl text-label"/>
     </div>
     <div
-        class="bg-home text-[#97A5BF] md:text-lg rounded-3xl p-7 md:py-20 mb-32 md:mb-12 ">
-      <div class="text-center w-2/3 flex flex-col items-center mx-auto gap-y-8">
+        class="w-full bg-home text-[#97A5BF] md:text-lg rounded-3xl p-7 md:py-20">
+      <div class="md:w-1/2 text-center flex flex-col items-center gap-y-4 md:gap-y-8 mx-auto">
         <h2 class="text-white -tracking-tight text-xl md:text-4xl font-medium md:font-semibold" v-text="footer.label"/>
         <p v-text="footer.text"/>
         <router-link
@@ -103,6 +103,8 @@ import useHome from "../composables/views/useHome.js";
 import Reviews from "../components/Reviews.vue";
 import Technologies from "../components/Technologies.vue";
 import Projects from "../components/Projects.vue";
+
+;
 
 const {upCity, header, buttons, partners, icons, techsHeader, posts, footer} = useHome();
 </script>

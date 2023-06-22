@@ -6,7 +6,7 @@
       <img v-for="(project, index) in projects" :key="index" :src="project" alt="project image"/>
     </div>
     <router-link :to="{name: 'OurWork'}"
-                 class="flex items-center gap-x-2 mt-7 px-8 py-4 border-2 border-desc rounded-4xl">
+                 class="flex items-center gap-x-2 max-md:mt-7 px-8 py-4 border-2 border-desc rounded-4xl">
       View All Projects <i class="fa-solid fa-arrow-right text-white"/>
     </router-link>
   </section>
