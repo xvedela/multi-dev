@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-home component py-10 md:py-20 max-md:text-center">
+  <section class="bg-home px-5 md:px-[20vw] py-10 md:py-20 max-md:text-center">
     <h1 class="mb-7 md:mb-5 text-white text-4xl md:text-6xl font-bold md:font-medium">
       Contact Us
     </h1>
