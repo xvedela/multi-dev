@@ -66,24 +66,10 @@
         </div>
       </div>
     </div>
-    <div class="w-fit flex flex-col items-center gap-y-8 md:gap-y-14">
-      <h2 v-text="techs.label" class="text-label font-semibold text-2xl md:text-4xl -tracking-tight"/>
-      <ul class="flex gap-x-20">
-        <li v-for="(logo, index) in techs.logos" :key="index">
-          <component :is="logo"/>
-        </li>
-      </ul>
-    </div>
+    <technologies/>
   </section>
-  <reviews />
-  <section class="bg-home flex flex-col items-center gap-y-5 md:gap-y-14 pb-12 md:pb-20 pt-7 md:pt-20 max-sm:px-5">
-    <h2 v-text="projects.label" class="text-white -tracking-tight text-2xl md:text-4xl font-medium"/>
-    <div class="sm:w-[60vw] grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-5">
-      <img v-for="(project, index) in projects._" :key="index" :src="project" alt="project img"/>
-    </div>
-    <a href="#" v-html="buttons.vap"
-       class="flex gap-x-2 items-center px-8 py-4 border-2 border-desc rounded-4xl text-white"/>
-  </section>
+  <reviews/>
+  <projects/>
   <section class="flex flex-col items-center gap-y-32 md:gap-y-28 max-sm:mx-5 ">
     <div class="mt-16 flex flex-col items-center gap-y-12">
       <h2 v-text="posts.label" class="text-label -tracking-tight text-2xl md:text-4xl font-medium"/>
@@ -115,6 +101,8 @@
 <script setup>
 import useHome from "../composables/views/useHome.js";
 import Reviews from "../components/Reviews.vue";
+import Technologies from "../components/Technologies.vue";
+import Projects from "../components/Projects.vue";
 
-const {upCity, header, buttons, partners, icons, techsHeader, techs, clients, projects, posts, footer} = useHome();
+const {upCity, header, buttons, partners, icons, techsHeader, posts, footer} = useHome();
 </script>

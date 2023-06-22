@@ -39,7 +39,6 @@ export default (function useHome() {
     bac: 'Book a Call <i class="fa-solid fa-arrow-right text-black"/>',
     ow: 'Our Work <i class="fa-solid fa-arrow-right text-white"/>',
     lm: `Learn More ${right}`,
-    vap: 'View All Projects <i class="fa-solid fa-arrow-right text-white"/>',
     lt: `Let's Talk ${right}`,
     rm: `Read More ${right}`,
     vapo: `View All Posts ${right}`,
@@ -88,56 +87,6 @@ you.`,
     },
   ];
 
-  const techs = {
-    label: 'Technologies We Use',
-    logos: [
-      Figma, Wordpress, Woo, Shopify, Vue, Laravel,
-    ],
-  };
-
-  const clients = {
-    label: 'Hear It From Our Clients',
-    _: [
-      {
-        img: getImgUrl('clients', "1661371646793-300x300.png"),
-        name: 'Jennifer Hall',
-        company: 'AegisLiving',
-        feedback: `Icepick was able to help us get a very difficult web redesign
-project across the finish line and continues to manage a large list
-of projects to help improve user experience and SEO. The team is
-knowledgeable, highly skilled and very responsive.`,
-      },
-      {
-        img: getImgUrl('clients', "jeff-300x300.png"),
-        name: 'Jeff Rasansky',
-        company: 'JR Law Firm',
-        feedback: `The guys at Icepick do an amazing job, and have helped us with
-more than one website. Always professional, quick to respond,
-great eye for design, and more than willing to help if anything
-comes up!`,
-      },
-      {
-        img: getImgUrl('clients', "sondra-300x300.png"),
-        name: 'Sondra Heffernan',
-        company: 'Infowerks',
-        feedback: `Icepick recently updated our company website. Our company is
-beyond happy with our new design, the delivery, and their
-professionalism in working with multiple decision makers. Looking
-forward to working with Icepick on future projects.`,
-      },
-    ],
-  };
-
-  const projects = {
-    label: 'Recent Projects',
-    _: [
-      getImgUrl('projects', 'Cart-Rescue-1-1-1024x1024.png'),
-      getImgUrl('projects', 'Freelanceleads-3-1024x1024.png'),
-      getImgUrl('projects', 'lucidmedia-5-1024x1024.png'),
-      getImgUrl('projects', 'stickerbros-2-1024x1024.png'),
-    ],
-  };
-
   const posts = {
     label: 'Recent Posts',
     _: [
@@ -161,5 +110,5 @@ forward to working with Icepick on future projects.`,
     text: 'Give us a shout and let’s see if we’re the right match for you and your business!',
   }
 
-  return {upCity, header, buttons, partners, icons, techsHeader, techs, clients, projects, posts, footer}
+  return {upCity, header, buttons, partners, icons, techsHeader, posts, footer}
 });
