@@ -1,1 +1,8 @@
-<template>Blog</template>
+<template>
+  Blog
+</template>
+
+<script setup>
+
+</script>
+

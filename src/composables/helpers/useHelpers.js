@@ -1,4 +1,4 @@
-// Image Url Generator
+// Image Url Generator (used before API)
 class IUG {
     constructor() {
         this.url = '../../assets/';

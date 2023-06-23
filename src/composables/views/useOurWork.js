@@ -1,5 +1,5 @@
 const getImgUrl = (imgName) =>
-  new URL(`../assets/images/websites/${imgName}`, import.meta.url).href;
+  new URL(`../../assets/images/websites/${imgName}`, import.meta.url).href;
 export default (function useOurWork() {
   const header = {
     label: "Our Work",

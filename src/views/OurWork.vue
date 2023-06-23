@@ -25,15 +25,9 @@
       </div>
     </div>
   </div>
-  <section>
-    <div
-        class="bg-home flex flex-col md:items-center gap-y-2 py-10 md:py-20 max-md:pl-5 max-lg:text-left  text-2xl lg:text-6xl">
-      <p class="text-white"
-         v-text="footer.label"/>
-      <router-link class="w-fit text-button underline"
-                   :to="{ name: footer.contact.name }"
-                   v-text="footer.contact.text"/>
-    </div>
+  <section class="bg-home md:text-center max-md:px-5 py-10 md:py-20 text-2xl md:text-6xl [&>*]:leading-normal">
+    <p class="text-white">Ready to work with us?</p>
+    <router-link class="text-button underline" :to="{ name: 'Contact' }" v-text="`Let's build something awesome.`"/>
   </section>
 </template>
 
