@@ -6,7 +6,7 @@ const IUG = createIUG();
 IUG.setDirectory('posts');
 
 export default function useBlogs() {
-    return {
+    const blog = {
         img: IUG.generateImageUrl('post-featured-image.png'),
         title: `Custom WordPress Development: A
 Comprehensive Guide`,
@@ -15,4 +15,14 @@ Comprehensive Guide`,
 WordPress Development from scratch? It all depends on your
 business goals.`
     }
+
+    const blogs = new Array(7);
+    for (let id = 0; id < 7; id++) {
+        blogs[id] = {
+            id,
+            ...blog,
+        };
+    }
+
+    return blogs;
 }

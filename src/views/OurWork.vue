@@ -25,8 +25,9 @@
       </div>
     </div>
   </div>
-  <section class="bg-home md:text-center max-md:px-5 py-10 md:py-20 text-2xl md:text-6xl [&>*]:leading-normal">
-    <p class="text-white">Ready to work with us?</p>
+  <section
+      class="bg-home lg:text-center max-lg:px-5 max-sm:py-10 sm:max-2xl:py-16 2xl:py-24 max-sm:text-2xl sm:max-2xl:text-4xl 2xl:text-6xl [&>*]:leading-normal">
+    <p class="text-white" v-text="'Ready to work with us?'"/>
     <router-link class="text-button underline" :to="{ name: 'Contact' }" v-text="`Let's build something awesome.`"/>
   </section>
 </template>
