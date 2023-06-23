@@ -29,8 +29,7 @@ export default (function useHome() {
         rm: `Read More ${right}`,
         vapo: `View All Posts ${right}`,
     };
-
-
+    
     const partners = {
         before:
             "before:content-[''] before:w-[17vw] before:h-0.5 before:mr-6 before:bg-white before:opacity-10 before:max-md:hidden",

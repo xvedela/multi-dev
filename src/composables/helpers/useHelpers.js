@@ -4,9 +4,10 @@ class IUG {
         this.url = '../../assets/';
     }
 
-    setDirectory = (directory) => this.url += directory;
+    setDirectory = (directory) => this.directory = directory;
 
-    generateImageUrl = (fileName) => new URL(`${this.url}/${fileName}`, import.meta.url).href;
+    generateImageUrl = (fileName) => new URL(`${this.url}/${this.directory}/${fileName}`, import.meta.url).href;
+
 }
 
 export default function useHelpers() {
