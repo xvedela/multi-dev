@@ -174,10 +174,20 @@
       </div>
     </div>
   </section>
-  <section>
-
-  </section>
-  <section>
+  <section class="pt-20 max-md:px-5">
+    <div class="flex flex-col gap-y-12 items-center pb-20">
+      <h2 class="text-label font-medium text-2xl md:text-4xl text-center">FAQs</h2>
+      <ul class="md:w-[40vw]">
+        <li class="border-b-2 p-3 text-label text-xl">What are you using to build the website?</li>
+        <li class="border-b-2 p-3 text-label text-xl">How long will it take for my website to be built?</li>
+        <li class="border-b-2 p-3 text-label text-xl">Do I have a say in how my website looks?</li>
+        <li class="border-b-2 p-3 text-label text-xl">What if I don’t have photos for my website?</li>
+        <li class="border-b-2 p-3 text-label text-xl">Can I edit the content on the website myself?</li>
+        <li class="border-b-2 p-3 text-label text-xl">Can you transfer blog content from my previous website?</li>
+        <li class="border-b-2 p-3 text-label text-xl">Can I cancel anytime?</li>
+        <li class="border-b-2 p-3 text-label text-xl">What happens after 24 months?</li>
+      </ul>
+    </div>
     <contact/>
   </section>
 </template>
