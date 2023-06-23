@@ -1,7 +1,7 @@
 <template>
   <section
       class="text-white bg-home flex flex-col items-center gap-y-5 md:gap-y-14 py-20 max-md:pb-12 max-md:pt-7 max-xl:px-5">
-    <h2 v-text="heading" class="text-2xl md:text-4xl font-medium"/>
+    <h2 class="text-2xl md:text-4xl font-medium">Recent Projects</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-5">
       <img v-for="(project, index) in projects" :key="index" :src="project" alt="project image"/>
     </div>
@@ -16,5 +16,5 @@
 <script setup>
 import useProjects from "../composables/components/useProjects.js";
 
-const {heading, projects} = useProjects();
+const projects = useProjects();
 </script>

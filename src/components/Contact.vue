@@ -11,10 +11,8 @@
         <input class="bg-input p-4 rounded-xl" type="url" placeholder="Website URL"/>
       </div>
       <textarea class="bg-input h-[215px] md:h-[16vw] p-4 rounded-xl resize-none"/>
-      <button
-          class="bg-button py-4 text-sm text-center rounded-3xl"
-          type="submit"
-      >Submit
+      <button class="bg-button py-4 text-sm text-center rounded-3xl" type="submit">
+        Submit
       </button>
     </form>
   </section>

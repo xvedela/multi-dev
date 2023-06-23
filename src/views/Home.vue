@@ -47,7 +47,7 @@
       </ul>
     </div>
   </section>
-  <section class="flex flex-col items-center gap-y-20 md:gap-y-44 mb-28 md:mb-20 mt-7 md:mt-24 max-sm:mx-5">
+  <section class="flex flex-col items-center gap-y-20 md:gap-y-44 mt-7 md:mt-24 max-sm:mx-5">
     <div class="sm:w-[60vw] flex flex-col items-center gap-y gap-y-20 md:gap-y-16">
       <div class="md:w-3/5 flex flex-col gap-y-5 text-center">
         <h2 v-html="techsHeader.label" class="text-label font-semibold text-2xl md:text-4xl -tracking-tight"/>
@@ -103,8 +103,6 @@ import useHome from "../composables/views/useHome.js";
 import Reviews from "../components/Reviews.vue";
 import Technologies from "../components/Technologies.vue";
 import Projects from "../components/Projects.vue";
-
-;
 
 const {upCity, header, buttons, partners, icons, techsHeader, posts, footer} = useHome();
 </script>
