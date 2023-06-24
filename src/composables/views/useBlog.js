@@ -11,11 +11,11 @@ export default function useBlog(id) {
     return {
         author: IUG.generateImageUrl('b52106db0bb442a7c48223da21c5c013.png'),
         ...blog,
-        header: `
+        intro: `
 <p>Whether you’re running an advertising campaign or just want to spice up your landing pages, we’ve created a list of <strong>10 Landing Page Do’s and Don’ts</strong> to help make sure you’re getting the most value out of your landing pages!</p>
 <p>A successful landing page is just as important as your advertising campaign. It’s one thing to get traffic from your ads, but if your landing pages do not convert, then you’re losing out on potential sales!</p>
         `,
-        footer: `
+        content: `
         <h2>1. Do: Invest In Your Landing Page Design</h2>
         <p>The layout and design of your landing page plays a major role in the success of your campaign.</p>
         <p>Visually appealing landing pages with a better user experience will have a much higher conversion rate than those that don’t.</p>

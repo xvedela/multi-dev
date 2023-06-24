@@ -7,7 +7,7 @@ IUG.setDirectory('posts');
 
 export default function useBlogs() {
     const blog = {
-        img: IUG.generateImageUrl('post-featured-image.png'),
+        img: IUG.generateImageUrl('10-Landing-Page-Dos-and-Donts-1024x534.jpg'),
         title: `Custom WordPress Development: A
 Comprehensive Guide`,
         meta: 'Nick Meagher | May 11, 2023',
