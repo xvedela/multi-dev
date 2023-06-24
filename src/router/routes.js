@@ -19,7 +19,7 @@ const routes = [
             {
                 path: "templatedWebSites",
                 name: "TemplatedWebsites",
-                component: () => import("../views/TemplatedWebSites.vue"),
+                component: () => import("../views/TemplatedWebsites.vue"),
             },
             {
                 path: "searchEngineOptimization",
