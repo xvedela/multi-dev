@@ -164,13 +164,12 @@
     <div class="flex flex-col gap-y-12 items-center pb-20 max-md:px-5">
       <h2 class="text-label font-medium text-2xl sm:max-2xl:text-3xl 2xl:text-4xl text-center" v-text="'FAQs'"/>
       <div v-for="(question, index) in questions" :key="index" class="lg:w-[40vw]">
-        <button class="border-b-2 p-3 text-label text-xl" @click="handleMultiple(index)" v-text="question.title"/>
-        <collapse :when="questions[index].isExpanded" class="collapse">
-          <p class="text-label text-xl" v-text="question.answer"/>
+        <button class="border-b-2 p-3 text-label text-xl" @click="() => handleMultiple(index)" v-text="question.title"/>
+        <collapse :when="questions[index].isExpanded" class="v-collapse">
+          <p class="text-label text-xl p-3 ml-5" v-text="question.answer"/>
         </collapse>
       </div>
     </div>
-
     <contact/>
   </section>
 </template>
@@ -203,7 +202,7 @@ function handleMultiple(index) {
 </script>
 
 <style scoped>
-.collapse {
-  transition: height 600ms cubic-bezier(0.3, 0, 0.6, 1);
+.v-collapse {
+  transition: height var(--vc-auto-duration) ease-out;
 }
 </style>
