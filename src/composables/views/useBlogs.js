@@ -3,7 +3,7 @@ import useHelpers from "../helpers/useHelpers.js";
 const {createIUG} = useHelpers();
 const IUG = createIUG();
 
-IUG.setDirectory('posts');
+IUG.setDirectory('blogs');
 
 export default function useBlogs() {
     const blog = {

@@ -5,7 +5,7 @@ const blogs = useBlogs();
 const {createIUG} = useHelpers();
 const IUG = createIUG();
 
-IUG.setDirectory('posts');
+IUG.setDirectory('blogs');
 export default function useBlog(id) {
     const blog = blogs.find(blog => blog.id === +id);
     return {
