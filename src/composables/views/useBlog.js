@@ -7,7 +7,7 @@ const IUG = createIUG();
 
 IUG.setDirectory('blogs');
 export default function useBlog(id) {
-    const blog = blogs.find(blog => blog.id === +id);
+    const blog = blogs.find((blog, index) => index === +id);
     return {
         author: IUG.generateImageUrl('b52106db0bb442a7c48223da21c5c013.png'),
         ...blog,

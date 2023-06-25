@@ -11,7 +11,6 @@
   </section>
   <section
       class="w-[90wv] sm:max-2xl:w-[75vw] 2xl:w-[60vw] flex flex-col items-center gap-y-10 pt-7 sm:max-2xl:pt-16 pb-20 2xl:py-24 mx-5 sm:mx-auto [&>p]:text-[#212529] [&>p]:lg:w-2/5 [&>p]:text-center">
-    <!-- sm:max-2xl: 2xl:-->
     <h2 class="text-label font-medium text-2xl sm:max-2xl:text-3xl 2xl:text-4xl text-center">
       Why Use <span class="text-home" v-text="'Templates?'"/>
     </h2>

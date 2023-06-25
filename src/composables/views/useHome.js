@@ -1,5 +1,3 @@
-import CW from "../../assets/icons/CW.vue";
-import SEO from "../../assets/icons/SEO.vue";
 import useArrows from "../helpers/useArrows.js";
 import useHelpers from "../helpers/useHelpers.js";
 
@@ -29,20 +27,14 @@ export default (function useHome() {
         rm: `Read More ${right}`,
         vapo: `View All Posts ${right}`,
     };
-    
+
     const partners = {
         before:
             "before:content-[''] before:w-[17vw] before:h-0.5 before:mr-6 before:bg-white before:opacity-10 before:max-md:hidden",
         label: 'Trusted by Innovative Companies Worldwide',
         after:
             "after:content-[''] after:w-[17vw] after:h-0.5 after:ml-6 after:bg-white after:opacity-10 after:max-md:hidden",
-        logos: [
-            IUG.generateImageUrl('aegisliving-cropped.svg'),
-            IUG.generateImageUrl('KOJIMA-PRODUCTIONS-png.png'),
-            IUG.generateImageUrl('doctor-butlers.svg'),
-            IUG.generateImageUrl('telepsychiatry-svg.svg'),
-            IUG.generateImageUrl('united-way.svg'),
-        ],
+        logos: Array(5).fill(IUG.generateImageUrl('united-way.svg')),
     };
 
     const techsHeader = {
@@ -53,9 +45,10 @@ businesses thrive online and creating user-focused websites
 that drive real results.`,
     };
 
+    IUG.setDirectory('icons');
     const icons = [
         {
-            _: CW,
+            icon: IUG.generateImageUrl('custom-websites.svg'),
             label: 'Custom Websites',
             text: `Whether you’re looking to build a custom
 marketing website or the next Twitter we can
@@ -63,34 +56,25 @@ help you build it.`,
             name: 'CustomWebsites'
         },
         {
-            _: SEO,
+            icon: IUG.generateImageUrl('search-engine-optimization.svg'),
             label: 'Search Engine Optimization',
             text: `You’ve got yourself a beautiful website but now
 you need your customers to find it, let us help
 you.`,
-            name: 'SearchEngineOptimization',
+            name: 'TemplatedWebsites',
         },
     ];
 
 
-    IUG.setDirectory('posts');
+    IUG.setDirectory('blogs');
     const posts = {
         label: 'Recent Posts',
-        _: [
-            {
-                label: `Custom WordPress Development: A Comprehensive Guide`,
-                img: IUG.generateImageUrl('photo-1454165205744-3b78555e5572-845x563-1.jpg'),
-            },
-            {
-                label: `10 Simple Ways to Improve Your Website Copy for Higher Conversions`,
-                img: IUG.generateImageUrl('improve-your-website-copy-1.jpg'),
-            },
+        _: Array(3).fill(
             {
                 label: `10 Landing Page Do’s and Don’ts`,
                 img: IUG.generateImageUrl('10-Landing-Page-Dos-and-Donts-1024x534.jpg'),
-            },
-        ]
-    }
+            }),
+    };
 
     const footer = {
         label: 'Want to see if Icepick is the right fit for you?',

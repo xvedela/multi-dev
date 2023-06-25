@@ -17,10 +17,5 @@ export default (function useOurWork() {
         bg: "bg-[#3B3D9C]",
     }
 
-    const works = new Array(6);
-    for (let id = 0; id < 6; id++) {
-        works[id] = work;
-    }
-
-    return works;
+    return Array(6).fill(work);
 });

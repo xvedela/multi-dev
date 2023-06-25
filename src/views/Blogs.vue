@@ -5,17 +5,17 @@
   <section class="py-10 md:py-20">
     <div
         class="w-[90vw] sm:max-2xl:w-[75vw] 2xl:w-[60vw] mx-5 sm:mx-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-x-7 gap-y-10 lg:gap-y-12">
-      <div v-for="blog in blogs">
-        <router-link :to="{name: 'BlogId', params: {id: blog.id}}">
+      <div v-for="(blog, index) in blogs" :key="index">
+        <router-link :to="{name: 'BlogId', params: {id: index}}">
           <img class="mb-5 lg:mb-6 w-full" :src="blog.img" :alt="blog.meta">
         </router-link>
-        <router-link :to="{name: 'BlogId', params: {id: blog.id}}">
+        <router-link :to="{name: 'BlogId', params: {id: index}}">
           <h2 class="mb-4 text-home text-xl sm:max-2xl:text-2xl 2xl:text-3xl font-medium leading-9"
               v-text="blog.title"/>
         </router-link>
         <p class="mb-4 lg:mb-6 text-meta" v-text="blog.meta"/>
         <p class="mb-5 text-txt text-lg leading-8" v-text="blog.text"/>
-        <router-link :to="{name: 'BlogId', params: {id: blog.id}}"
+        <router-link :to="{name: 'BlogId', params: {id: index}}"
                      class="block w-fit bg-button px-8 py-4 rounded-4xl" v-text="'Read Post'"/>
       </div>
     </div>

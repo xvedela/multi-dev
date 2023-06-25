@@ -57,7 +57,7 @@
         <div v-for="(icon, index) in icons" :key="index"
              class="md:w-1/2 flex flex-col items-center gap-y-5 px-20 py-8 md:pb-16 md:pt-20 text-center">
           <div class="bg-[#8AC0FF1A] w-24 h-24 rounded-[50%] flex justify-center items-center">
-            <component :is="icon._"/>
+            <img :src="icon.icon" alt="icon"/>
           </div>
           <h3 v-text="icon.label"/>
           <p v-text="icon.text" class="text-desc"/>
