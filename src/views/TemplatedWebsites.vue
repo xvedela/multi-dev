@@ -160,13 +160,13 @@
       </div>
     </div>
   </section>
-  <section class="pt-20">
-    <div class="flex flex-col gap-y-12 items-center pb-20 max-md:px-5">
+  <section>
+    <div class="flex flex-col items-center gap-y-10 pt-7 sm:max-2xl:pt-16 pb-20 2xl:py-24 mx-5 sm:mx-auto">
       <h2 class="text-label font-medium text-2xl sm:max-2xl:text-3xl 2xl:text-4xl text-center" v-text="'FAQs'"/>
       <div v-for="(question, index) in questions" :key="index" class="lg:w-[40vw]">
         <button class="border-b-2 p-3 text-label text-xl" @click="() => handleMultiple(index)" v-text="question.title"/>
         <collapse :when="questions[index].isExpanded" class="v-collapse">
-          <p class="text-label text-xl p-3 ml-5" v-text="question.answer"/>
+          <p class="text-label text-xl mt-1 ml-5" v-text="question.answer"/>
         </collapse>
       </div>
     </div>
@@ -175,26 +175,10 @@
 </template>
 <script setup>
 import Contact from "../components/Contact.vue";
-import {reactive} from 'vue'
 import {Collapse} from 'vue-collapsed';
+import useTemplatedWebsites from "../composables/views/useTemplatedWebsites.js";
 
-const questions = reactive([
-  {
-    title: 'What are you using to build the website?',
-    answer: 'Answer one',
-    isExpanded: false // Initial value
-  },
-  {
-    title: 'How long will it take for my website to be built?',
-    answer: 'Answer two',
-    isExpanded: false
-  },
-  {
-    title: 'Do I have a say in how my website looks?',
-    answer: 'Answer three',
-    isExpanded: false
-  }
-])
+const questions = useTemplatedWebsites();
 
 function handleMultiple(index) {
   questions[index].isExpanded = !questions[index].isExpanded
