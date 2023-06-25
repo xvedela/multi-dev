@@ -1,7 +1,9 @@
 <template>
   <header class="bg-header sticky pl-4 md:pl-[1.8vw] pr-10 md:pr-[1.8vw] py-5 md:py-[1.2vw]">
     <nav class="flex items-center max-md:justify-between">
-      <img :src="logo" alt="multi dev logo"/>
+      <router-link :to="{name: 'Home'}">
+        <img :src="logo" alt="multi dev logo"/>
+      </router-link>
       <button
           class="block md:hidden z-10"
           @click="toggleNavbar"
