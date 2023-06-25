@@ -40,8 +40,8 @@
           :class="partners.before + ' ' + partners.after"
           v-text="'Trusted by Innovative Companies Worldwide'"
       ></h5>
-      <ul class="flex items-center gap-x-11">
-        <li v-for="(logo, index) in partners.logos" :key="index">
+      <ul class="flex items-center gap-x-11 example overflow-x-scroll">
+        <li v-for="(logo, index) in partners.logos" :key="index" class="flex-shrink-0">
           <img :src="logo" alt="partner logo"/>
         </li>
       </ul>
