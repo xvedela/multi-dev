@@ -129,28 +129,10 @@
         A Few of Our Template <span class="text-home" v-text="'Projects'"/>
       </h2>
       <div class="flex max-lg:flex-col gap-7 [&>div]:rounded-3xl [&>div]:bg-white">
-        <div>
+        <div v-for="index in 3" :key="index">
           <img src="../assets/images/template-screenshot1.png" alt="template screenshot">
           <div class="flex items-center justify-between px-6 py-8">
             <p class="text-[#515D72]" v-text="'ATM Sports'"/>
-            <a href="#" class="text-sm text-[#23A6F0]">
-              View Website <i class="fa-solid fa-arrow-right"/>
-            </a>
-          </div>
-        </div>
-        <div>
-          <img src="../assets/images/template-screenshot2.png" alt="template screenshot">
-          <div class="flex items-center justify-between px-6 py-8">
-            <p class="text-[#515D72]" v-text="'Credit 91'"/>
-            <a href="#" class="text-sm text-[#23A6F0]">
-              View Website <i class="fa-solid fa-arrow-right"/>
-            </a>
-          </div>
-        </div>
-        <div>
-          <img src="../assets/images/template-screenshot3.png" alt="template screenshot">
-          <div class="flex items-center justify-between px-6 py-8">
-            <p class="text-[#515D72]" v-text="'Atlantic Food Bars'"/>
             <a href="#" class="text-sm text-[#23A6F0]">
               View Website <i class="fa-solid fa-arrow-right"/>
             </a>
