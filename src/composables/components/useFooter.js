@@ -1,9 +1,9 @@
 import useNavigation from "./useNavigation.js";
 
 export default (function () {
-  let {logo, links} = useNavigation();
-  links._.splice(2, 0, ...links._[1].subLinks);
-  links._.splice(1, 1);
+  let links = useNavigation();
+  links.splice(2, 0, ...links[1].subLinks);
+  links.splice(1, 1);
   const text = "We help businesses generate more revenue through strategic web design and SEO services.";
   const label = "Follow Us";
   const social = [
@@ -30,5 +30,5 @@ export default (function () {
       {label: "Sitemap", url: "#"},
     ],
   };
-  return {logo, links, text, label, social, companies, sub};
+  return {links, text, label, social, companies, sub};
 });

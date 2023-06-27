@@ -1,8 +1,8 @@
-import useArrows from "../helpers/useArrows.js";
+import useArrows from "../useArrows.js";
 import useNavigation from "./useNavigation.js";
 
 const arrows = useArrows();
-
+const links = useNavigation();
 export default (function useHeader() {
   const button = {
     name: "Contact",
@@ -12,5 +12,5 @@ export default (function useHeader() {
     menu: '<i class="fa-solid fa-xl fa-bars  text-white"/>',
     close: '<i class="fa-solid fa-xl fa-x"/>',
   };
-  return {...useNavigation(), button, res, arrows};
+  return {links, button, res, arrows};
 });

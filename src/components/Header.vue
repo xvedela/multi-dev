@@ -2,7 +2,7 @@
   <header class="bg-header sticky pl-4 md:pl-[1.8vw] pr-10 md:pr-[1.8vw] py-5 md:py-[1.2vw]">
     <nav class="flex items-center max-md:justify-between">
       <router-link :to="{name: 'Home'}">
-        <img :src="logo" alt="multi dev logo"/>
+        <img src="../assets/logos/multi-dev.svg" alt="multi dev logo"/>
       </router-link>
       <button
           class="block md:hidden z-10"
@@ -13,7 +13,7 @@
            :class="state.navbar ? 'open' : 'hidden'">
         <div></div>
         <ul class="max-md:w-full flex max-md:flex-col items-center gap-x-[2.1vw] text-black md:text-white">
-          <li v-for="(link, index) in links._" :key="index">
+          <li v-for="(link, index) in links" :key="index">
             <div
                 v-if="link.name === 'Services'"
                 class="relative inline-block"
@@ -68,7 +68,9 @@ const toggleServices = () => {
 const toggleNavbar = () => {
   state.navbar = !state.navbar;
 };
-const {logo, links, button, res, arrows} = useHeader();
+
+console.log(useHeader());
+const {links, button, res, arrows} = useHeader();
 </script>
 
 <style scoped>

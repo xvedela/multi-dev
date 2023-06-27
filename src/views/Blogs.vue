@@ -7,7 +7,7 @@
         class="w-[90vw] sm:max-2xl:w-[75vw] 2xl:w-[60vw] mx-5 sm:mx-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-x-7 gap-y-10 lg:gap-y-12">
       <div v-for="(blog, index) in blogs" :key="index">
         <router-link :to="{name: 'BlogId', params: {id: index}}">
-          <img class="mb-5 lg:mb-6 w-full" :src="blog.img" :alt="blog.meta">
+          <img class="mb-5 lg:mb-6 w-full" src="../assets/blogs/10-landing-page-dos-and-donts.jpg" :alt="blog.meta">
         </router-link>
         <router-link :to="{name: 'BlogId', params: {id: index}}">
           <h2 class="mb-4 text-home text-xl sm:max-2xl:text-2xl 2xl:text-3xl font-medium leading-9"

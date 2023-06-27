@@ -7,11 +7,13 @@
           class="bg-[#2C4163] flex items-center gap-x-3 py-3 px-5 rounded-3xl"
       >
         <ul class="flex gap-x-1">
-          <li v-for="star in 5" :key="star" v-html="upCity.star"/>
+          <li v-for="star in 5" :key="star">
+            <i class="fa-solid fa-star text-[#23A6F0]"/>
+          </li>
         </ul>
         <p v-text="'5.0 Rating'"/>
         <span class="text-desc" v-text="'|'"/>
-        <img :src="upCity.logo" alt="upcity logo"/>
+        <img src="../assets/logos/upcity.svg" alt="upcity logo"/>
       </a>
       <h1
           v-text="header.label"
@@ -41,8 +43,8 @@
           v-text="'Trusted by Innovative Companies Worldwide'"
       ></h5>
       <ul class="flex items-center gap-x-11 example overflow-x-scroll">
-        <li v-for="(logo, index) in partners.logos" :key="index" class="flex-shrink-0">
-          <img :src="logo" alt="partner logo"/>
+        <li v-for="index in 6" :key="index" class="flex-shrink-0">
+          <img src="../assets/logos/united-way.svg" alt="partner logo"/>
         </li>
       </ul>
     </div>

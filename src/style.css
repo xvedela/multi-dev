@@ -16,14 +16,22 @@ body {
     overflow-x: hidden;
 }
 
-
 /* Hide scrollbar for Chrome, Safari and Opera */
-.example::-webkit-scrollbar {
+.hide-scrollbar::-webkit-scrollbar {
     display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-.example {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+.hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* changing default prev and next buttons */
+.carousel__prev,
+.carousel__next {
+    background-color: #25344F !important;
+    padding: 1.5rem !important;
+    font-size: medium !important;
+    border-radius: 50% !important;
 }

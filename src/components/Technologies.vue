@@ -3,8 +3,8 @@
     <h2 class="text-label font-semibold text-2xl sm:max-2xl:text-3xl 2xl:text-4xl max-2xl:text-center"
         v-text="'Technologies We Use'"/>
     <ul class="flex gap-x-20 max-md:overflow-x-scroll example">
-      <li v-for="(technology, index) in technologies" :key="index" class="flex-shrink-0">
-        <img :src="technology" alt="technology logo"/>
+      <li v-for="(_, index) in useTechnologies()" :key="index" class="flex-shrink-0">
+        <img src="../assets/technologies/figma.svg" alt="technology logo"/>
       </li>
     </ul>
   </div>
@@ -13,6 +13,4 @@
 
 <script setup>
 import useTechnologies from "../composables/components/useTechnologies.js";
-
-const technologies = useTechnologies();
 </script>

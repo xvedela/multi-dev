@@ -7,11 +7,11 @@
   </section>
   <div
       class="w-[90wv] sm:max-2xl:w-[75vw] 2xl:w-[60vw] flex flex-col gap-y-12 sm:max-2xl:gap-y-10 2xl:gap-y-7 mx-5 sm:mx-auto mt-16 sm:max-2xl:mt-12 2xl:mt-9 mb-48 sm:max-2xl:mb-32 2xl:mb-16 text-white">
-    <div v-for="(work, index) in works" :key="index"
+    <div v-for="(work, index) in useOurWork()" :key="index"
          class="flex max-xl:flex-col max-lg:p-4 max-xl:p-8 xl:pt-16 xl:pr-24 gap-y-8 md:gap-x-24 rounded-3xl md:rounded-xl"
          :class="work.lg"
     >
-      <img :src="work.img"
+      <img src="../assets/works/cloudvara.png"
            class="xl:w-1/2 max-sm:rounded-xl"
            :alt="work.company + ' logo'"/>
       <div class="flex flex-col gap-y-7 sm:max-xl:items-center sm:max-xl:text-center max-sm:ml-10 mb-7 xl:mb-20">
@@ -33,6 +33,4 @@
 
 <script setup>
 import useOurWork from "../composables/views/useOurWork.js";
-
-const works = useOurWork();
 </script>

@@ -3,7 +3,7 @@
     <div class="flex max-md:flex-col justify-between">
       <div class="flex flex-col gap-y-7">
         <router-link :to="{name: 'Home'}">
-          <img :src="logo" alt="multi dev logo" class="w-fit"/>
+          <img src="../assets/logos/multi-dev.svg" alt="multi dev logo" class="w-fit"/>
         </router-link>
         <p
             class="w-7/12 text-sm"
@@ -19,12 +19,12 @@
         </ul>
       </div>
       <div class="flex gap-x-5 md:gap-x-[1.5vw] max-md:mt-8">
-        <ul class="flex flex-col gap-y-4" :class="links.before">
-          <li v-for="(link, index) in links._" :key="index">
+        <ul class="flex flex-col gap-y-4 before:content-['Learn_More']" :class="links.before">
+          <li v-for="(link, index) in links" :key="index">
             <router-link :to="{ name: link.name }" v-text="link.label"/>
           </li>
         </ul>
-        <ul class="flex flex-col gap-y-4" :class="companies.before">
+        <ul class="flex flex-col gap-y-4 before:content-['Locations']">
           <li
               v-for="(company, index) in companies._"
               :key="index"
@@ -49,5 +49,5 @@
 <script setup>
 import useFooter from "../composables/components/useFooter.js";
 
-const {logo, links, text, label, social, companies, sub} = useFooter();
+const {links, text, label, social, companies, sub} = useFooter();
 </script>
