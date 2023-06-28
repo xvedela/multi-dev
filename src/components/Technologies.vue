@@ -1,15 +1,14 @@
 <template>
-  <div class="flex flex-col items-center gap-y-8 md:gap-y-14 mb-28 md:mb-20 mt-12 2xl:mt-20">
-    <h2 class="text-label font-semibold text-2xl sm:max-2xl:text-3xl 2xl:text-4xl max-2xl:text-center"
+  <div class="mb-28 sm:max-2xl:mb-24 2xl:mb-20 mt-20 sm:max-2xl:mt-32 2xl:mt-44">
+    <h2 class="text-label font-semibold text-2xl sm:max-2xl:text-3xl 2xl:text-4xl text-center mb-8 sm:max-2xl:mb-10 2xl:mb-12"
         v-text="'Technologies We Use'"/>
-    <ul class="flex gap-x-20 max-md:overflow-x-scroll example">
-      <li v-for="(_, index) in useTechnologies()" :key="index" class="flex-shrink-0">
-        <img src="../assets/technologies/figma.svg" alt="technology logo"/>
+    <ul class="hide-scrollbar flex gap-x-20 max-sm:overflow-x-scroll example">
+      <li v-for="(technology, index) in useTechnologies()" :key="index" class="flex-shrink-0">
+        <img :src="technology" alt="technology logo" loading="lazy"/>
       </li>
     </ul>
   </div>
 </template>
-
 
 <script setup>
 import useTechnologies from "../composables/components/useTechnologies.js";
