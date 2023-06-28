@@ -19,7 +19,6 @@
 <script setup>
 import useOurWork from "../composables/views/useOurWork.js";
 import Work from "../components/Work.vue";
-import {onMounted} from "vue";
 
 const works = useOurWork();
 </script>

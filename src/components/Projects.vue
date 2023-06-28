@@ -8,7 +8,7 @@
         <project v-for="(project, index) in projects" :key="index" :project="project"/>
       </div>
       <router-link :to="{name: 'OurWork'}" v-html="btnLabel"
-                   class="flex items-center gap-x-2 my-12 sm:max-2xl:my-16 2xl:my-20 px-8 py-4 border-2 border-white border-opacity-30 rounded-4xl"/>
+                   class="flex items-center gap-x-2 my-12 sm:max-2xl:my-16 2xl:my-20 px-8 py-4 border-2 border-white border-opacity-30 rounded-3xl"/>
     </div>
   </section>
 </template>

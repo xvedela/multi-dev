@@ -6,7 +6,7 @@
     </h1>
     <p class="lg:w-3/5 text-desc sm:text-xl tracking-tighter"
        v-text="'If your business doesn’t need a custom website you can utilize our templates and get it up and running in 2-3 weeks!'"/>
-    <router-link class="text-white w-fit px-8 py-4 border-2 border-desc rounded-4xl max-sm:hidden"
+    <router-link class="text-white w-fit px-8 py-4 border-2 border-desc rounded-3xl max-sm:hidden"
                  :to="{name: 'Contact'}" v-text="'Get In Touch'"/>
   </section>
   <section
@@ -130,7 +130,7 @@
       </h2>
       <div class="flex max-lg:flex-col gap-7 [&>div]:rounded-3xl [&>div]:bg-white">
         <div v-for="index in 3" :key="index">
-          <img src="../assets/images/template-screenshot1.png" alt="template screenshot">
+          <img src="../assets/images/template-project.png" alt="template screenshot">
           <div class="flex items-center justify-between px-6 py-8">
             <p class="text-[#515D72]" v-text="'ATM Sports'"/>
             <a href="#" class="text-sm text-[#23A6F0]">

@@ -27,12 +27,12 @@
         <router-link
             :to="{ name: 'Contact' }"
             v-html="buttons.bac"
-            class="bg-button flex items-center gap-x-2 px-8 py-4 text-black rounded-4xl"
+            class="bg-button flex items-center gap-x-2 px-8 py-4 text-black rounded-3xl"
         />
         <router-link
             :to="{ name: 'OurWork' }"
             v-html="buttons.ow"
-            class="bg-transparent flex items-center gap-x-2 px-9 py-4 border-2 border-desc rounded-4xl"
+            class="bg-transparent flex items-center gap-x-2 px-9 py-4 border-2 border-desc rounded-3xl"
         />
       </div>
     </div>
@@ -64,7 +64,7 @@
           <h3 v-text="icon.label"/>
           <p v-text="icon.text" class="text-desc"/>
           <router-link :to="{name: icon.name}" v-html="buttons.lm"
-                       class="flex gap-x-2 items-center px-8 py-4 border-2 border-desc rounded-4xl"/>
+                       class="flex gap-x-2 items-center px-8 py-4 border-2 border-desc rounded-3xl"/>
         </div>
       </div>
     </div>
@@ -93,7 +93,7 @@
         <router-link
             :to="{ name: 'Contact' }"
             v-html="buttons.lt"
-            class="w-fit bg-button flex items-center gap-x-2 px-8 py-4 text-black rounded-4xl"
+            class="w-fit bg-button flex items-center gap-x-2 px-8 py-4 text-black rounded-3xl"
         />
       </div>
     </div>

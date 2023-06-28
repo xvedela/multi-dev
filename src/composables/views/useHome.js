@@ -1,4 +1,6 @@
 import useArrows from "../useArrows.js";
+import cw from "../../assets/icons/custom-websites.svg";
+import seo from "../../assets/icons/search-engine-optimization.svg";
 
 const {right} = useArrows();
 
@@ -38,7 +40,7 @@ that drive real results.`,
 
   const icons = [
     {
-      icon: "https://icepick.co/wp-content/uploads/2023/03/custom-websites.svg",
+      icon: cw,
       label: 'Custom Websites',
       text: `Whether you’re looking to build a custom
 marketing website or the next Twitter we can
@@ -46,7 +48,7 @@ help you build it.`,
       name: 'CustomWebsites'
     },
     {
-      icon: "https://icepick.co/wp-content/uploads/2023/05/search-engine-optimization.svg",
+      icon: seo,
       label: 'Search Engine Optimization',
       text: `You’ve got yourself a beautiful website but now
 you need your customers to find it, let us help
@@ -69,5 +71,5 @@ you.`,
     text: 'Give us a shout and let’s see if we’re the right match for you and your business!',
   }
 
-  return { header, buttons, partners, icons, techsHeader, posts, footer}
+  return {header, buttons, partners, icons, techsHeader, posts, footer}
 });

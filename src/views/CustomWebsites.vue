@@ -2,14 +2,14 @@
   <section
       class="relative bg-home flex flex-col max-lg:items-center gap-y-7 lg:gap-y-5 px-5 sm:px-[20vw] py-10 sm:max-2xl:py-16 2xl:py-20 max-lg:text-center overflow-hidden">
     <img class="absolute -top-20 right-0 max-2xl:hidden" src="../assets/images/custom-websites.png"
-         alt="custom websites">
+         alt="custom websites" loading="lazy">
     <h1 class="text-white text-4xl sm:max-2xl:text-5xl 2xl:text-6xl font-bold lg:font-medium">
       <span class="text-button" v-text="'Custom'"/> Websites
     </h1>
     <p class="lg:w-3/5 text-desc sm:text-xl tracking-tighter"
        v-text="'Whether you’re looking to build a custom marketing website or the next Twitter we can help you build anything you’re envisioning.'"/>
     <router-link :to="{name: 'Contact'}" v-text="'Get In Touch'"
-                 class="text-white w-fit px-8 py-4 border-2 border-desc rounded-4xl max-sm:hidden"/>
+                 class="text-white w-fit px-8 py-4 border-2 border-desc rounded-3xl max-sm:hidden"/>
   </section>
   <section class="max-sm:mx-5">
     <div class="flex max-2xl:flex-col max-2xl:items-center">
@@ -29,12 +29,12 @@
           <li><p v-text="'More Credibility'"/></li>
           <li><p v-text="'Faster Page Speeds'"/></li>
         </ul>
-        <router-link class="bg-button flex items-center gap-x-2 w-fit px-8 py-4 rounded-4xl"
+        <router-link class="bg-button flex items-center gap-x-2 w-fit px-8 py-4 rounded-3xl"
                      :to="{name: 'Contact'}">
           Work With Us <i class="fa-solid fa-arrow-right"/>
         </router-link>
       </div>
-      <img src="../assets/images/div.full-bg.png" alt="background image"/>
+      <img src="../assets/images/custom-websites-bg.png" alt="background image" loading="lazy"/>
     </div>
   </section>
   <technologies/>
