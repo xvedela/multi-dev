@@ -1,21 +1,17 @@
-export default (function useNavigation() {
-  return [
-    {name: "Home", label: "Home"},
+import {reactive} from 'vue';
+
+export default function useNavigation() {
+  return reactive([
+    {name: 'Home', title: 'Home'},
     {
-      name: "Services",
-      label: "Services",
+      name: 'Services',
+      title: 'Services',
       subLinks: [
-        {
-          name: "TemplatedWebsites",
-          label: "Templated Websites",
-        },
-        {
-          name: "CustomWebsites",
-          label: "Custom Websites",
-        },
+        {name: 'TemplatedWebsites', title: 'Templated Websites'},
+        {name: 'CustomWebsites', title: 'Custom Websites'},
       ],
     },
-    {name: "OurWork", label: "Our Work"},
-    {name: "Blog", label: "Blog"},
-  ];
-});
+    {name: 'OurWork', title: 'Our Work'},
+    {name: 'Blog', title: 'Blog'},
+  ]);
+};
