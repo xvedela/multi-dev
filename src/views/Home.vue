@@ -42,9 +42,9 @@
           :class="partners.before + ' ' + partners.after"
           v-text="'Trusted by Innovative Companies Worldwide'"
       ></h5>
-      <ul class="flex items-center gap-x-11 example overflow-x-scroll">
+      <ul class="hide-scrollbar flex items-center gap-x-11 example overflow-x-scroll">
         <li v-for="index in 6" :key="index" class="flex-shrink-0">
-          <img src="../assets/logos/united-way.svg" alt="partner logo"/>
+          <img src="https://icepick.co/wp-content/uploads/2023/01/united-way.svg" alt="partner logo"/>
         </li>
       </ul>
     </div>
@@ -77,7 +77,7 @@
       <h2 v-text="posts.label" class="text-label text-2xl md:text-4xl font-medium"/>
       <div class="flex max-md:flex-col gap-x-7 gap-y-10">
         <div v-for="(post, index) in posts._" :key="index" class="flex flex-col gap-y-2.5">
-          <img :src="post.img" alt="post img"/>
+          <img :src="post.postImage" alt="post img"/>
           <h3 v-text="post.label" class="font-medium text-lg"/>
           <span v-html="buttons.rm" class="block text-[#23A6F0]"/>
         </div>

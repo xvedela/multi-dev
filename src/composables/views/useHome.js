@@ -38,6 +38,7 @@ that drive real results.`,
 
   const icons = [
     {
+      icon: "https://icepick.co/wp-content/uploads/2023/03/custom-websites.svg",
       label: 'Custom Websites',
       text: `Whether you’re looking to build a custom
 marketing website or the next Twitter we can
@@ -45,6 +46,7 @@ help you build it.`,
       name: 'CustomWebsites'
     },
     {
+      icon: "https://icepick.co/wp-content/uploads/2023/05/search-engine-optimization.svg",
       label: 'Search Engine Optimization',
       text: `You’ve got yourself a beautiful website but now
 you need your customers to find it, let us help
@@ -57,6 +59,7 @@ you.`,
     label: 'Recent Posts',
     _: Array(3).fill(
       {
+        postImage: "https://icepick.co/wp-content/uploads/2022/08/10-Landing-Page-Dos-and-Donts-1400x730.jpg",
         label: `10 Landing Page Do’s and Don’ts`,
       }),
   };
