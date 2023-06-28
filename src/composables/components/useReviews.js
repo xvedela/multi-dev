@@ -1,6 +1,8 @@
+import jenniferHall from "../../assets/reviews/jennifer-hall.jpeg";
+
 export default function useReviews() {
-  return Array(3).fill({
-    "authorImage": "https://icepick.co/wp-content/uploads/2022/08/1661371646793-300x300.jpeg",
+  return Array(5).fill({
+    "authorImage": jenniferHall,
     "authorName": "Jennifer Hall",
     "companyName": "AegisLiving",
     "websiteUrl": "https://www.aegisliving.com/",
