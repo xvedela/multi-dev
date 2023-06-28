@@ -18,9 +18,6 @@ export default {
         'footer': "#0B0B0B",
         'section': '#EEF2F6',
       },
-      borderRadius: {
-        '4xl': "40px",
-      }
     },
   },
   plugins: [],

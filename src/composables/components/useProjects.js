@@ -1,6 +1,12 @@
+import stickerbros from "../../assets/projects/stickerbros.webp"
+
 export default function useProjects() {
-  return Array(4).fill({
-    "projectImage": "https://icepick.co/wp-content/uploads/2023/05/stickerbros-2.png",
-    "websiteUrl": "https://www.stickerbros.com/",
-  });
+  return {
+    "heading": "Recent Project",
+    "projects": Array(4).fill({
+      "projectImage": stickerbros,
+      "websiteUrl": "https://www.stickerbros.com/",
+    }),
+    "btnLabel": "View All Projects <i class=\"fa-solid fa-arrow-right text-white\"/>",
+  };
 };
