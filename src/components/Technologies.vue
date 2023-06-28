@@ -3,7 +3,7 @@
     <h2 class="text-label font-semibold text-2xl sm:max-2xl:text-3xl 2xl:text-4xl text-center mb-8 sm:max-2xl:mb-10 2xl:mb-12"
         v-text="'Technologies We Use'"/>
     <ul class="hide-scrollbar flex gap-x-20 max-sm:overflow-x-scroll example">
-      <li v-for="(technology, index) in useTechnologies()" :key="index" class="flex-shrink-0">
+      <li v-for="(technology, index) in technologies" :key="index" class="flex-shrink-0">
         <img :src="technology" alt="technology logo" loading="lazy"/>
       </li>
     </ul>
@@ -12,4 +12,6 @@
 
 <script setup>
 import useTechnologies from "../composables/components/useTechnologies.js";
+
+const technologies = useTechnologies();
 </script>
