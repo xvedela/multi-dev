@@ -11,24 +11,13 @@ export default (function () {
     {icon: "fa-instagram", url: "#"},
     {icon: "fa-twitter", url: "#"},
   ];
-  const companies = {
-    before: "before:content-['Locations']",
-    _: [
-      {name: "Dallas", url: "#"},
-      {name: "Plano", websiteUrl: "#"},
-      {name: "Frisco", url: "#"},
-      {name: "Fort", url: "#"},
-      {name: "Allen", url: "#"},
-      {name: "McKinney", url: "#"},
-      {name: "Grapevine", url: "#"},
-    ],
-  };
-  const sub = {
-    text: '<i class="fa-regular fa-copyright"></i> 2023 - Multi Dev Development, LLC',
-    links: [
-      {label: "Privacy Policy", url: "#"},
-      {label: "Sitemap", url: "#"},
-    ],
-  };
-  return {links, text, label, social, companies, sub};
+  const companies = Array(7).fill({
+    name: "Dallas Web Design",
+    websiteUrl: "https://icepick.co/dallas-web-design-development/"
+  });
+  const subFooterLinks = [
+    {label: "Privacy Policy", url: "#"},
+    {label: "Sitemap", url: "#"},
+  ];
+  return {links, text, label, social, companies, subFooterLinks};
 });
