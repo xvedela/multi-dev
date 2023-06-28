@@ -1,30 +1,30 @@
-import { reactive } from "vue";
+import {reactive} from 'vue';
 
 export default function useContact() {
   return reactive({
-    label: "READY TO GET STARTED?",
+    label: 'READY TO GET STARTED?',
     heading: "Let's Grow Together.",
     fields: [
       {
         type: 'text',
         placeholder: 'Name*',
-        required: true
+        required: true,
       },
       {
         type: 'email',
         placeholder: 'Email*',
-        required: true
+        required: true,
       },
       {
         type: 'text',
         placeholder: 'Company Name*',
-        required: true
+        required: true,
       },
       {
         type: 'url',
-        placeholder: 'Website URL'
+        placeholder: 'Website URL',
       },
     ],
-    buttonText: "Submit",
+    buttonText: 'Submit',
   });
 };
