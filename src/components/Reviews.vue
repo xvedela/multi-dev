@@ -1,7 +1,7 @@
 <template>
   <section
       class="bg-section py-8 sm:max-2xl:py-14 2xl:py-20 max-sm:px-5">
-    <h2 class="text-label mb-5 sm:max-2xl:mb-8 2xl:mb-12 font-medium text-2xl sm:max-2xl:text-3xl 2xl:text-4xl leading-tight text-center"
+    <h2 class="text-label mb-5 sm:max-2xl:mb-8 2xl:mb-12 font-medium text-2xl sm:max-2xl:text-3xl 2xl:text-4xl text-center"
         v-text="'Hear It From Our Clients'"/>
     <carousel :autoplay="2000" v-bind="settings" :breakpoints="breakpoints" :wrap-around="true">
       <slide v-for="(review, index) in reviews" :key="index">
@@ -24,11 +24,10 @@
 <script setup>
 import 'vue3-carousel/dist/carousel.css';
 import {Carousel, Navigation, Slide} from "vue3-carousel";
-import useReviews from "../composables/components/useReviews";
-import {onMounted} from "vue";
+import useReviews from "../composables/components/useReviews.js";
 import Review from "./Review.vue";
 
-let reviews;
+const reviews = useReviews();
 // carousel settings
 const settings = {
   itemsToShow: 1,
@@ -45,6 +44,4 @@ const breakpoints = {
     itemsToShow: 3.2,
   },
 };
-
-onMounted(async () => reviews = await useReviews());
 </script>

@@ -1,7 +1,14 @@
 <template>
-
+  <a :href="project.websiteUrl">
+    <img :src="project.projectImage" alt="project image" loading="lazy" class="rounded-2xl"/>
+  </a>
 </template>
 
 <script setup>
-
+const {project} = defineProps({
+  project: {
+    required: true,
+    type: Object,
+  },
+});
 </script>
