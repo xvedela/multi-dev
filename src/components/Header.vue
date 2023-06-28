@@ -69,7 +69,6 @@ const toggleNavbar = () => {
   state.navbar = !state.navbar;
 };
 
-console.log(useHeader());
 const {links, button, res, arrows} = useHeader();
 </script>
 

@@ -1,6 +1,6 @@
 export default function useReviews() {
   const response = {
-    "reviews": Array(3).fill({
+    "data": Array(3).fill({
       "authorImage": "https://icepick.co/wp-content/uploads/2022/08/1661371646793-300x300.jpeg",
       "authorName": "Jennifer Hall",
       "companyName": "AegisLiving",
@@ -12,5 +12,9 @@ knowledgeable, highly skilled and very responsive.`,
     }),
   };
 
-  return response.reviews;
+  return new Promise((resolve, reject) => {
+    const data = response.data;
+    if (data) resolve(data); // Promise fulfilled with the data
+    else reject('Error: Data not found'); // Promise rejected with an error message
+  });
 };
