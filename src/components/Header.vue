@@ -1,18 +1,16 @@
 <template>
-  <header class="bg-header sticky pl-4 md:pl-[1.8vw] pr-10 md:pr-[1.8vw] py-5 md:py-[1.2vw]">
+  <header class="bg-header sticky p-5">
     <nav class="flex items-center max-md:justify-between">
-      <router-link :to="{name: 'Home'}">
-        <img src="../assets/logos/multi-dev.svg" alt="multi dev logo"/>
-      </router-link>
+      <multi-dev/>
       <button
           class="block md:hidden z-10"
           @click="toggleNavbar"
-          v-html="state.navbar ? res.close : res.menu"
+          v-html="state.navbar ? close : menu"
       />
       <div class="md:w-full md:flex max-md:flex-col md:justify-between text-xl md:text-base"
            :class="state.navbar ? 'open' : 'hidden'">
         <div></div>
-        <ul class="max-md:w-full flex max-md:flex-col items-center gap-x-[2.1vw] text-black md:text-white">
+        <ul class="max-md:w-full flex max-md:flex-col items-center gap-x-10 text-black md:text-white">
           <li v-for="(link, index) in links" :key="index">
             <div
                 v-if="link.name === 'Services'"
@@ -20,31 +18,31 @@
                 @click="toggleServices"
             >
               <div class="flex items-center hover:cursor-pointer opacity-60 gap-x-1">
-                <p v-text="link.label"/>
+                <p v-text="link.title"/>
                 <button class="pt-1"
                         v-html="state.services ? arrows.up : arrows.down"/>
               </div>
               <ul v-if="state.services"
-                  class="content bg-white min-w-max absolute top-[100%] max-md:left-[-50%] flex flex-col gap-y-[0.6vw] px-3 py-3 text-black rounded-md max-md:z-10"
+                  class="bg-white text-center min-w-max absolute top-full max-md:-left-1/2 flex flex-col gap-y-2 px-3 py-3 text-black rounded-md max-md:z-50"
                   @click="state.navbar = false">
                 <li v-for="(subLink, index) in link.subLinks" :key="index">
                   <router-link :to="{ name: subLink.name }"
-                               v-text="subLink.label"
-                               class="px-[0.4vw] py-[0.2vw] rounded-2xl hover:bg-button"/>
+                               v-text="subLink.title"
+                               class="px-2.5 py-1 rounded-2xl hover:bg-button"/>
                 </li>
               </ul>
             </div>
             <router-link
                 v-else
                 :to="{ name: link.name }"
-                v-text="link.label"
+                v-text="link.title"
                 :class="{ 'opacity-60': link.name !== router.name }"
                 @click="state.navbar = false"/>
           </li>
         </ul>
-        <router-link :to="{ name: button.name }"
-                     class="flex items-center bg-button px-[1.8vw] py-[0.5vw] rounded-4xl gap-x-[0.5vw]"
-                     v-html="button.label"/>
+        <router-link :to="{ name }"
+                     class="bg-button flex items-center gap-x-2 px-9 py-2 rounded-3xl"
+                     v-html="title" @click="state.navbar = false"/>
       </div>
     </nav>
   </header>
@@ -54,6 +52,7 @@
 import useHeader from "../composables/components/useHeader.js";
 import {useRoute} from "vue-router";
 import {reactive} from "vue";
+import MultiDev from "./MultiDev.vue";
 
 const router = useRoute();
 const state = reactive({
@@ -69,7 +68,7 @@ const toggleNavbar = () => {
   state.navbar = !state.navbar;
 };
 
-const {links, button, res, arrows} = useHeader();
+const {links, name, title, menu, close, arrows} = useHeader();
 </script>
 
 <style scoped>

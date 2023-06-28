@@ -7,7 +7,7 @@ import laravel from "../../assets/technologies/laravel.svg";
 
 export default function useTechnologies() {
   return {
-    "heading": "Technologies We Use",
-    "technologies": [figma, wordpress, woo, shopify, vue, laravel],
+    heading: "Technologies We Use",
+    technologies: [figma, wordpress, woo, shopify, vue, laravel],
   };
 };
