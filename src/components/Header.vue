@@ -23,7 +23,7 @@
                         v-html="state.services ? arrows.up : arrows.down"/>
               </div>
               <ul v-if="state.services"
-                  class="bg-white text-center min-w-max absolute top-full max-md:-left-1/2 flex flex-col gap-y-2 px-3 py-3 text-black rounded-md"
+                  class="bg-white text-center min-w-max absolute top-full max-md:-left-1/2 flex flex-col gap-y-2 px-3 py-3 text-black rounded-md z-20"
                   @click="state.navbar = false">
                 <li v-for="(subLink, index) in link.subLinks" :key="index">
                   <router-link :to="{ name: subLink.name }"
