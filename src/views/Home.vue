@@ -1,10 +1,11 @@
 <template>
   <section class="bg-home mb-32 md:mb-12 flex flex-col items-center gap-y-32 px-4 py-10 sm:py-20 text-white">
-    <div class="sm:w-[60vw] flex flex-col items-center gap-y-10 md:gap-y-8">
+    <div
+        class="w-[90vw] sm:max-2xl:w-[75vw] 2xl:w-[60vw] mx-5 sm:mx-auto flex flex-col items-center gap-y-10 md:gap-y-8">
       <a
           href="https://upcity.com/"
           target="_blank"
-          class="bg-[#2C4163] flex items-center gap-x-3 py-3 px-5 rounded-3xl"
+          class="bg-[#2C4163] flex items-center gap-x-3 py-3 px-5 rounded-3xl hover:bg-opacity-90"
       >
         <ul class="flex gap-x-1">
           <li v-for="star in 5" :key="star">
@@ -44,7 +45,7 @@
       ></h5>
       <ul class="hide-scrollbar flex items-center gap-x-11 example overflow-x-scroll">
         <li v-for="index in 6" :key="index" class="flex-shrink-0">
-          <img src="https://icepick.co/wp-content/uploads/2023/01/united-way.svg" alt="partner logo"/>
+          <img src="../assets/partners/united-way.svg" alt="partner logo"/>
         </li>
       </ul>
     </div>

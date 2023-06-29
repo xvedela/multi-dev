@@ -6,10 +6,10 @@
       <h2 class="text-label -mt-3 text-2xl sm:max-2xl:text-3xl 2xl:text-4xl" v-text="heading" />
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 [&>input]:bg-input [&>input]:p-4 [&>input]:rounded-xl">
         <input v-for="(field, index) in fields" :key="index" :type="field.type" :placeholder="field.placeholder"
-          :required="field.required" />
+          :required="field.required" class="outline-home" />
       </div>
-      <textarea class="bg-input h-52 sm:max-2xl:h-64 2xl:h-80 p-4 rounded-xl resize-none" />
-      <button class="bg-button lg:mt-2 py-4 text-sm text-center rounded-3xl" type="submit" v-text="buttonText" />
+      <textarea class="bg-input h-52 sm:max-2xl:h-64 2xl:h-80 p-4 rounded-xl resize-none outline-home" />
+      <button class="bg-button lg:mt-2 py-4 text-sm text-center rounded-4xl hover:brightness-105" type="submit" v-text="buttonText" />
     </form>
   </section>
 </template>
