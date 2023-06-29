@@ -3,7 +3,7 @@
       class="bg-home flex flex-col max-lg:items-center gap-y-7 lg:gap-y-5 px-5 sm:px-[20vw] py-10 sm:max-2xl:py-16 2xl:py-20 max-lg:text-center">
     <h1 class="text-white text-4xl sm:max-2xl:text-5xl 2xl:text-6xl font-bold lg:font-medium" v-html="heading"/>
     <p class="lg:w-3/5 text-desc sm:text-xl tracking-tighter" v-text="text"/>
-    <router-link class="text-white w-fit px-8 py-4 border-2 border-desc rounded-3xl max-sm:hidden"
+    <router-link class="text-white w-fit px-8 py-4 border-2 border-desc rounded-4xl max-sm:hidden hover:border-white"
                  :to="{name: 'Contact'}" v-text="buttonText"/>
   </section>
   <section
@@ -68,11 +68,11 @@
       <h2 class="text-label font-medium text-2xl sm:max-2xl:text-3xl 2xl:text-4xl text-center"
           v-html="projects.heading"/>
       <div class="flex max-lg:flex-col gap-7 [&>div]:rounded-3xl [&>div]:bg-white">
-        <div v-for="(project, index) in projects._" :key="index">
-          <img :src="project.projectImage" alt="template project" loading="lazy">
+        <div v-for="(project, index) in projects._" :key="index" class="overflow-hidden">
+          <img :src="project.projectImage" alt="template project" loading="lazy" class="cursor-pointer transition-transform duration-300 transform-gpu hover:scale-105">
           <div class="flex items-center justify-between px-6 py-8">
             <p class="text-[#515D72]" v-text="project.companyName"/>
-            <a href="#" class="text-sm text-[#23A6F0]" v-html="project.buttonText"></a>
+            <a href="#" class="text-sm text-[#23A6F0] hover:brightness-110" v-html="project.buttonText"></a>
           </div>
         </div>
       </div>

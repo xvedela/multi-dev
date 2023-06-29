@@ -21,7 +21,7 @@ export default function useCustomWebsites() {
           <li><p>More Credibility</p></li>
           <li><p>Faster Page Speeds</p></li>
         </ul>   
-        <a class="bg-button flex items-center gap-x-2 w-fit px-8 py-4 rounded-3xl" :href="/contact">
+        <a class="cursor-pointer bg-button flex items-center gap-x-2 w-fit px-8 py-4 rounded-4xl hover:brightness-105" href="/contact">
           Work With Us <i class="fa-solid fa-arrow-right"/>
         </a>`
   });

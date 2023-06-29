@@ -6,7 +6,7 @@
       <h1 class="text-white text-4xl sm:max-2xl:text-5xl 2xl:text-6xl font-bold lg:font-medium" v-html="heading"/>
       <p class="lg:w-3/5 text-desc sm:text-xl tracking-tighter" v-text="text"/>
       <router-link :to="{name: 'Contact'}" v-text="buttonText"
-                   class="text-white w-fit px-8 py-4 border-2 border-desc rounded-3xl max-sm:hidden"/>
+                   class="text-white w-fit px-8 py-4 border-2 border-desc rounded-4xl max-sm:hidden hover:border-white"/>
     </div>
     <img class="absolute -top-20 right-0 max-2xl:hidden" src="../assets/images/custom-websites.png"
          alt="custom websites">
