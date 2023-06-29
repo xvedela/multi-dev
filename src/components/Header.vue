@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-header sticky p-5">
+  <header class="bg-header sticky p-5 z-10">
     <nav class="flex items-center max-md:justify-between">
       <multi-dev/>
       <button
@@ -23,7 +23,7 @@
                         v-html="state.services ? arrows.up : arrows.down"/>
               </div>
               <ul v-if="state.services"
-                  class="bg-white text-center min-w-max absolute top-full max-md:-left-1/2 flex flex-col gap-y-2 px-3 py-3 text-black rounded-md max-md:z-50"
+                  class="bg-white text-center min-w-max absolute top-full max-md:-left-1/2 flex flex-col gap-y-2 px-3 py-3 text-black rounded-md"
                   @click="state.navbar = false">
                 <li v-for="(subLink, index) in link.subLinks" :key="index">
                   <router-link :to="{ name: subLink.name }"
