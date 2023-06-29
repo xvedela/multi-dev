@@ -32,7 +32,7 @@
         <router-link
             :to="{ name: 'OurWork' }"
             v-html="buttons.ow"
-            class="bg-transparent text-white flex items-center gap-x-2 px-9 py-4 border-2 border-desc rounded-4xl hover:bg-button hover:text-black hover:border-transparent"
+            class="bg-transparent text-white flex items-center gap-x-2 px-9 py-4 border-2 border-desc rounded-4xl hover:border-white"
         />
       </div>
     </div>
