@@ -17,7 +17,7 @@
                 class="relative inline-block"
                 @click="toggleServices"
             >
-              <div class="flex items-center hover:cursor-pointer opacity-60 gap-x-1">
+              <div class="flex items-center hover:cursor-pointer opacity-60 hover:opacity-90 gap-x-1">
                 <p v-text="link.title"/>
                 <button class="pt-1"
                         v-html="state.services ? arrows.up : arrows.down"/>
@@ -37,11 +37,12 @@
                 :to="{ name: link.name }"
                 v-text="link.title"
                 :class="{ 'opacity-60': link.name !== router.name }"
+                class="hover:opacity-90"
                 @click="state.navbar = false"/>
           </li>
         </ul>
         <router-link :to="{ name }"
-                     class="bg-button flex items-center gap-x-2 px-9 py-2 rounded-3xl"
+                     class="bg-button flex items-center gap-x-2 px-9 py-2 rounded-4xl hover:bg-white"
                      v-html="title" @click="state.navbar = false"/>
       </div>
     </nav>
