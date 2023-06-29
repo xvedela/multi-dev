@@ -15,21 +15,21 @@
         <div class="flex gap-x-12 lg:gap-x-7 [&>ul]:flex [&>ul]:flex-col [&>ul]:gap-y-4">
           <ul :class="learnMore">
             <li v-for="(link, index) in links" :key="index">
-              <router-link :to="{ name: link.name }" v-text="link.title"/>
+              <router-link :to="{ name: link.name }" v-text="link.title" class="hover:text-home"/>
             </li>
           </ul>
           <ul :class="locations" class="flex-shrink-0">
             <li v-for="(company, index) in companies" :key="index">
-              <a :href="company.url" v-text="company.name" target="_blank"/>
+              <a :href="company.url" v-text="company.name" target="_blank" class="hover:text-home"/>
             </li>
           </ul>
         </div>
       </div>
-      <div class="flex max-lg:flex-col-reverse justify-between max-lg:gap-y-7 pt-10 lg:pt-5 border-t-2 border-t-white/20 text-xs opacity-80">
-        <span v-html="copyright"/>
+      <div class="flex max-lg:flex-col-reverse justify-between max-lg:gap-y-7 pt-10 lg:pt-5 border-t-2 border-t-white/20 text-xs">
+        <span v-html="copyright" class="opacity-80"/>
         <ul class="flex gap-x-20 lg:gap-x-6">
           <li v-for="(link, index) in footer" :key="index">
-            <a :href="link.url" v-text="link.title" target="_blank"/>
+            <a :href="link.url" v-text="link.title" target="_blank" class="opacity-80 hover:opacity-100"/>
           </li>
         </ul>
       </div>

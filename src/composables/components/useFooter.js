@@ -9,9 +9,9 @@ export default function useFooter() {
     text: 'We help businesses generate more revenue through strategic web design and SEO services.',
     label: 'Follow Us',
     social: [
-      {icon: '<i class="fa-brands fa-square-facebook fa-xl" />', url: '#'},
-      {icon: '<i class="fa-brands fa-instagram fa-xl" />', url: '#'},
-      {icon: '<i class="fa-brands fa-twitter fa-xl" />', url: '#'},
+      {icon: '<i class="fa-brands fa-square-facebook fa-xl hover:text-[#4267B2]" />', url: '#'},
+      {icon: '<i class="fa-brands fa-instagram fa-xl hover:text-[#E1306C]" />', url: '#'},
+      {icon: '<i class="fa-brands fa-twitter fa-xl hover:text-[#1DA1F2]" />', url: '#'},
     ],
     learnMore: "before:content-['Learn_More']",
     links,
