@@ -83,11 +83,11 @@
         <div v-for="(post, index) in posts._" :key="index" class="flex flex-col gap-y-2.5">
           <img :src="post.postImage" alt="post img"/>
           <h3 v-text="post.label" class="font-medium text-lg"/>
-          <span v-html="buttons.rm" class="block text-[#23A6F0]"/>
+          <router-link :to="{name: 'BlogId', params: {id: '0'}}" v-html="buttons.rm" class="block text-[#23A6F0]"/>
         </div>
       </div>
-      <a href="#" v-html="buttons.vapo"
-         class="flex items-center gap-x-2 px-8 py-4 border-2 border-desc rounded-4xl text-label"/>
+      <router-link :to="{name: 'Blog'}" v-html="buttons.vapo"
+                   class="flex items-center gap-x-2 px-8 py-4 border-2 border-desc rounded-3xl text-label"/>
     </div>
     <div
         class="w-full bg-home text-[#97A5BF] md:text-lg rounded-3xl p-7 md:py-20">
