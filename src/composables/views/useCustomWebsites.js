@@ -1,5 +1,7 @@
+import {reactive} from "vue";
+
 export default function useCustomWebsites() {
-  return {
+  return reactive({
     heading: '<span class="text-button">Custom</span> Websites',
     text: 'Whether you’re looking to build a custom marketing website or the next Twitter we can help you build anything you’re envisioning.',
     buttonText: 'Get In Touch',
@@ -22,5 +24,5 @@ export default function useCustomWebsites() {
         <a class="bg-button flex items-center gap-x-2 w-fit px-8 py-4 rounded-3xl" :href="/contact">
           Work With Us <i class="fa-solid fa-arrow-right"/>
         </a>`
-  };
+  });
 };
