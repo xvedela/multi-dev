@@ -1,6 +1,7 @@
 import useArrows from "../useArrows.js";
 import cw from "../../assets/icons/custom-websites.svg";
 import seo from "../../assets/icons/search-engine-optimization.svg";
+import postImage from "../../assets/blogs/10-Landing-Page-Dos-and-Donts.jpg";
 
 const {right} = useArrows();
 
@@ -14,7 +15,7 @@ export default (function useHome() {
   };
 
   const buttons = {
-    bac: 'Book a Call <i class="fa-solid fa-arrow-right text-black"/>',
+    bac: `Book a Call ${right}`,
     ow: 'Our Work <i class="fa-solid fa-arrow-right text-white"/>',
     lm: `Learn More ${right}`,
     lt: `Let's Talk ${right}`,
@@ -24,10 +25,10 @@ export default (function useHome() {
 
   const partners = {
     before:
-      "before:content-[''] before:w-[17vw] before:h-0.5 before:mr-6 before:bg-white before:opacity-10 before:max-md:hidden",
+      "before:content-[''] before:w-[15vw] before:h-0.5 before:mr-6 before:bg-white before:opacity-20 before:max-md:hidden",
     label: 'Trusted by Innovative Companies Worldwide',
     after:
-      "after:content-[''] after:w-[17vw] after:h-0.5 after:ml-6 after:bg-white after:opacity-10 after:max-md:hidden",
+      "after:content-[''] after:w-[15vw] after:h-0.5 after:ml-6 after:bg-white after:opacity-20 after:max-md:hidden",
   };
 
   const techsHeader = {
@@ -61,7 +62,7 @@ you.`,
     label: 'Recent Posts',
     _: Array(3).fill(
       {
-        postImage: "https://icepick.co/wp-content/uploads/2022/08/10-Landing-Page-Dos-and-Donts-1400x730.jpg",
+        postImage,
         label: `10 Landing Page Do’s and Don’ts`,
       }),
   };

@@ -106,5 +106,5 @@ import Reviews from "../components/Reviews.vue";
 import Technologies from "../components/Technologies.vue";
 import Projects from "../components/Projects.vue";
 
-const {upCity, header, buttons, partners, icons, techsHeader, posts, footer} = useHome();
+const {header, buttons, partners, icons, techsHeader, posts, footer} = useHome();
 </script>
