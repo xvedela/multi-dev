@@ -49,23 +49,27 @@
       </ul>
     </div>
   </section>
-  <section class="flex flex-col items-center gap-y-20 md:gap-y-44 mt-7 md:mt-24 max-sm:mx-5">
+  <section class="flex flex-col items-center mt-7 md:mt-24 max-sm:mx-5">
     <div class="sm:w-[60vw] flex flex-col items-center gap-y gap-y-20 md:gap-y-16">
       <div class="md:w-3/5 flex flex-col gap-y-5 text-center">
         <h2 v-html="techsHeader.label" class="text-label font-semibold text-2xl md:text-4xl -tracking-tight"/>
         <p v-text="techsHeader.text" class="text-[#52627A] md:text-lg"/>
       </div>
       <div class="bg-home flex max-md:flex-col rounded-3xl text-white max-md:gap-y-8">
-        <div v-for="(icon, index) in icons" :key="index"
-             class="md:w-1/2 flex flex-col items-center gap-y-5 px-20 py-8 md:pb-16 md:pt-20 text-center">
-          <div class="bg-[#8AC0FF1A] w-24 h-24 rounded-[50%] flex justify-center items-center">
-            <img :src="icon.icon" alt="icon"/>
+        <template v-for="(icon, index) in icons" :key="index">
+          <div
+              class="relative md:w-1/2 flex flex-col items-center gap-y-5 px-20 py-8 md:pb-16 md:pt-20 text-center"
+          >
+            <div class="bg-[#8AC0FF1A] w-24 h-24 rounded-[50%] flex justify-center items-center">
+              <img :src="icon.icon" alt="icon"/>
+            </div>
+            <h3 v-text="icon.label"/>
+            <p v-text="icon.text" class="text-desc"/>
+            <router-link :to="{name: icon.name}" v-html="buttons.lm"
+                         class="flex gap-x-2 items-center px-8 py-4 border-2 border-desc rounded-3xl"/>
+            <div v-if="index === 0" class="absolute h-1/2 top-1/4 right-0 border-[1px] border-white/60"/>
           </div>
-          <h3 v-text="icon.label"/>
-          <p v-text="icon.text" class="text-desc"/>
-          <router-link :to="{name: icon.name}" v-html="buttons.lm"
-                       class="flex gap-x-2 items-center px-8 py-4 border-2 border-desc rounded-3xl"/>
-        </div>
+        </template>
       </div>
     </div>
     <technologies/>
