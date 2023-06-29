@@ -36,6 +36,11 @@ body {
     border-radius: 50% !important;
 }
 
+.carousel__prev:hover,
+.carousel__next:hover {
+    background-color: black !important;
+}
+
 @media (min-width: 1024px) {
     .carousel__prev {
         margin-left: 2.25rem !important;

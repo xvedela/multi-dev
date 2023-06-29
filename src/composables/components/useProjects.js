@@ -7,6 +7,6 @@ export default function useProjects() {
       "projectImage": stickerbros,
       "websiteUrl": "https://www.stickerbros.com/",
     }),
-    "btnLabel": "View All Projects <i class=\"fa-solid fa-arrow-right text-white\"/>",
+    "btnLabel": 'View All Projects <i class="fa-solid fa-arrow-right"/>',
   };
 };

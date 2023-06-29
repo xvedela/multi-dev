@@ -16,7 +16,7 @@ export default (function useHome() {
 
   const buttons = {
     bac: `Book a Call ${right}`,
-    ow: 'Our Work <i class="fa-solid fa-arrow-right text-white"/>',
+    ow: 'Our Work <i class="fa-solid fa-arrow-right"/>',
     lm: `Learn More ${right}`,
     lt: `Let's Talk ${right}`,
     rm: `Read More ${right}`,
